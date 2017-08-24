@@ -15,6 +15,15 @@
 		1B5E7B451F4F23C20090F06A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B431F4F23C20090F06A /* LaunchScreen.storyboard */; };
 		1B5E7B501F4F23C20090F06A /* FlowControllerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B4F1F4F23C20090F06A /* FlowControllerDemoTests.swift */; };
 		1B5E7B5B1F4F23C20090F06A /* FlowControllerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B5A1F4F23C20090F06A /* FlowControllerDemoUITests.swift */; };
+		1B5E7B821F4F2AEB0090F06A /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B811F4F2AEB0090F06A /* Reservation.swift */; };
+		1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B831F4F2B2F0090F06A /* HotelSearchViewController.swift */; };
+		1B5E7B861F4F2B2F0090F06A /* HotelSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B841F4F2B2F0090F06A /* HotelSearchViewController.xib */; };
+		1B5E7B891F4F2EDC0090F06A /* CountryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B871F4F2EDC0090F06A /* CountryPickerViewController.swift */; };
+		1B5E7B8A1F4F2EDC0090F06A /* CountryPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B881F4F2EDC0090F06A /* CountryPickerViewController.xib */; };
+		1B5E7B8F1F4F31370090F06A /* HotelPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B8D1F4F31370090F06A /* HotelPickerViewController.swift */; };
+		1B5E7B901F4F31370090F06A /* HotelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B8E1F4F31370090F06A /* HotelPickerViewController.xib */; };
+		1B5E7B921F4F33E80090F06A /* HotelSelectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B911F4F33E80090F06A /* HotelSelectionFlowController.swift */; };
+		1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		1B5E7B561F4F23C20090F06A /* FlowControllerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowControllerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B5E7B5A1F4F23C20090F06A /* FlowControllerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllerDemoUITests.swift; sourceTree = "<group>"; };
 		1B5E7B5C1F4F23C20090F06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B5E7B811F4F2AEB0090F06A /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		1B5E7B831F4F2B2F0090F06A /* HotelSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelSearchViewController.swift; sourceTree = "<group>"; };
+		1B5E7B841F4F2B2F0090F06A /* HotelSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotelSearchViewController.xib; sourceTree = "<group>"; };
+		1B5E7B871F4F2EDC0090F06A /* CountryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPickerViewController.swift; sourceTree = "<group>"; };
+		1B5E7B881F4F2EDC0090F06A /* CountryPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryPickerViewController.xib; sourceTree = "<group>"; };
+		1B5E7B8D1F4F31370090F06A /* HotelPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelPickerViewController.swift; sourceTree = "<group>"; };
+		1B5E7B8E1F4F31370090F06A /* HotelPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotelPickerViewController.xib; sourceTree = "<group>"; };
+		1B5E7B911F4F33E80090F06A /* HotelSelectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelSelectionFlowController.swift; sourceTree = "<group>"; };
+		1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NibInstantiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,11 @@
 		1B5E7B371F4F23C20090F06A /* FlowControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1B5E7B691F4F289D0090F06A /* Extensions */,
+				1B5E7B6A1F4F289D0090F06A /* Flows */,
+				1B5E7B6B1F4F289D0090F06A /* Models */,
+				1B5E7B6C1F4F289D0090F06A /* Protocols */,
+				1B5E7B6D1F4F289D0090F06A /* Routers */,
 				1B5E7B381F4F23C20090F06A /* AppDelegate.swift */,
 				1B5E7B3A1F4F23C20090F06A /* FirstViewController.swift */,
 				1B5E7B3C1F4F23C20090F06A /* SecondViewController.swift */,
@@ -126,6 +149,194 @@
 				1B5E7B5C1F4F23C20090F06A /* Info.plist */,
 			);
 			path = FlowControllerDemoUITests;
+			sourceTree = "<group>";
+		};
+		1B5E7B691F4F289D0090F06A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B5E7B6A1F4F289D0090F06A /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B6E1F4F28E50090F06A /* Account flow */,
+				1B5E7B6F1F4F28E50090F06A /* Application flow */,
+				1B5E7B701F4F28E60090F06A /* Authentication flow */,
+				1B5E7B711F4F28E60090F06A /* Booking flow */,
+				1B5E7B721F4F28E60090F06A /* Hotel selection flow */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		1B5E7B6B1F4F289D0090F06A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B811F4F2AEB0090F06A /* Reservation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B5E7B6C1F4F289D0090F06A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1B5E7B6D1F4F289D0090F06A /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		1B5E7B6E1F4F28E50090F06A /* Account flow */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B7C1F4F2A9D0090F06A /* AccountDetailViewController */,
+				1B5E7B7D1F4F2A9D0090F06A /* AccountViewController */,
+				1B5E7B7E1F4F2A9D0090F06A /* BookingDetailViewController */,
+			);
+			path = "Account flow";
+			sourceTree = "<group>";
+		};
+		1B5E7B6F1F4F28E50090F06A /* Application flow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Application flow";
+			sourceTree = "<group>";
+		};
+		1B5E7B701F4F28E60090F06A /* Authentication flow */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B7F1F4F2AB30090F06A /* LoginViewController */,
+				1B5E7B801F4F2AB30090F06A /* RegisterViewController */,
+			);
+			path = "Authentication flow";
+			sourceTree = "<group>";
+		};
+		1B5E7B711F4F28E60090F06A /* Booking flow */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B771F4F29EC0090F06A /* BookingReviewViewController */,
+				1B5E7B781F4F29EC0090F06A /* DatePickerViewController */,
+				1B5E7B791F4F29EC0090F06A /* GuestDetailViewController */,
+				1B5E7B7A1F4F29EC0090F06A /* PriceSelectionViewController */,
+				1B5E7B7B1F4F29EC0090F06A /* RoomSelectionViewController */,
+			);
+			path = "Booking flow";
+			sourceTree = "<group>";
+		};
+		1B5E7B721F4F28E60090F06A /* Hotel selection flow */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B741F4F298C0090F06A /* CountryPickerViewController */,
+				1B5E7B751F4F298C0090F06A /* HotelPickerViewController */,
+				1B5E7B761F4F298C0090F06A /* HotelSearchViewController */,
+				1B5E7B911F4F33E80090F06A /* HotelSelectionFlowController.swift */,
+			);
+			path = "Hotel selection flow";
+			sourceTree = "<group>";
+		};
+		1B5E7B741F4F298C0090F06A /* CountryPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B871F4F2EDC0090F06A /* CountryPickerViewController.swift */,
+				1B5E7B881F4F2EDC0090F06A /* CountryPickerViewController.xib */,
+			);
+			path = CountryPickerViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B751F4F298C0090F06A /* HotelPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B8D1F4F31370090F06A /* HotelPickerViewController.swift */,
+				1B5E7B8E1F4F31370090F06A /* HotelPickerViewController.xib */,
+			);
+			path = HotelPickerViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B761F4F298C0090F06A /* HotelSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1B5E7B831F4F2B2F0090F06A /* HotelSearchViewController.swift */,
+				1B5E7B841F4F2B2F0090F06A /* HotelSearchViewController.xib */,
+			);
+			path = HotelSearchViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B771F4F29EC0090F06A /* BookingReviewViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookingReviewViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B781F4F29EC0090F06A /* DatePickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DatePickerViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B791F4F29EC0090F06A /* GuestDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GuestDetailViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B7A1F4F29EC0090F06A /* PriceSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PriceSelectionViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B7B1F4F29EC0090F06A /* RoomSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RoomSelectionViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B7C1F4F2A9D0090F06A /* AccountDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccountDetailViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B7D1F4F2A9D0090F06A /* AccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccountViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B7E1F4F2A9D0090F06A /* BookingDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BookingDetailViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B7F1F4F2AB30090F06A /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		1B5E7B801F4F2AB30090F06A /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegisterViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +449,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5E7B8A1F4F2EDC0090F06A /* CountryPickerViewController.xib in Resources */,
 				1B5E7B451F4F23C20090F06A /* LaunchScreen.storyboard in Resources */,
 				1B5E7B421F4F23C20090F06A /* Assets.xcassets in Resources */,
 				1B5E7B401F4F23C20090F06A /* Main.storyboard in Resources */,
+				1B5E7B861F4F2B2F0090F06A /* HotelSearchViewController.xib in Resources */,
+				1B5E7B901F4F31370090F06A /* HotelPickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +479,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5E7B8F1F4F31370090F06A /* HotelPickerViewController.swift in Sources */,
 				1B5E7B3D1F4F23C20090F06A /* SecondViewController.swift in Sources */,
 				1B5E7B391F4F23C20090F06A /* AppDelegate.swift in Sources */,
+				1B5E7B821F4F2AEB0090F06A /* Reservation.swift in Sources */,
 				1B5E7B3B1F4F23C20090F06A /* FirstViewController.swift in Sources */,
+				1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */,
+				1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */,
+				1B5E7B891F4F2EDC0090F06A /* CountryPickerViewController.swift in Sources */,
+				1B5E7B921F4F33E80090F06A /* HotelSelectionFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
