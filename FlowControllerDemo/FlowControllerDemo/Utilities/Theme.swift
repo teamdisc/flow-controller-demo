@@ -15,6 +15,9 @@ struct Color {
     
     static let midnightBlue = UIColor(52, 73, 94)
     static let darkMidnightBlue = UIColor(44, 62, 80)
+    
+    static let cloudWhite = UIColor(236, 240, 241)
+    static let silver = UIColor(189, 195, 199)
 }
 
 struct Font {

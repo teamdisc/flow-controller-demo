@@ -59,7 +59,6 @@
                     </state>
                     <connections>
                         <action selector="loginDidTap:" destination="-1" eventType="touchUpInside" id="x1q-pX-AIG"/>
-                        <action selector="nonMemberPriceDidTap:" destination="-1" eventType="touchUpInside" id="xIZ-Js-TgP"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120.0 Baht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZg-8L-kgA">
