@@ -19,6 +19,8 @@ class HotelPickerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Hotel picker"
+        self.navigationItem.backBarButtonItem = .defaultBack
         
         if let countryName = countryName {
             firstButton.setTitle(countryName+" 1st hotel", for: .normal)

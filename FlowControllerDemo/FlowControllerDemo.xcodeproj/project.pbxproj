@@ -26,6 +26,7 @@
 		1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */; };
 		1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8A1F50AE06003AE998 /* Router.swift */; };
 		1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */; };
+		1BAFE6841F51D85F007CE06E /* UIButton+AppearanceRoundable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFE6831F51D85F007CE06E /* UIButton+AppearanceRoundable.swift */; };
 		1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */; };
 		1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA21F516B0500E1B8EE /* BookingReviewViewController.swift */; };
 		1BF39BA51F516B0500E1B8EE /* BookingReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BA31F516B0500E1B8EE /* BookingReviewViewController.xib */; };
@@ -37,6 +38,8 @@
 		1BF39BB31F516B4100E1B8EE /* PriceSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BB11F516B4100E1B8EE /* PriceSelectionViewController.xib */; };
 		1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BB41F516B4B00E1B8EE /* RoomSelectionViewController.swift */; };
 		1BF39BB71F516B4B00E1B8EE /* RoomSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BB51F516B4B00E1B8EE /* RoomSelectionViewController.xib */; };
+		1BF39BB91F5174B000E1B8EE /* BookingFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BB81F5174B000E1B8EE /* BookingFlowController.swift */; };
+		1BF39BBC1F518E3300E1B8EE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BBB1F518E3300E1B8EE /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,7 @@
 		1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NibInstantiable.swift"; sourceTree = "<group>"; };
 		1B8DDF8A1F50AE06003AE998 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		1BAFE6831F51D85F007CE06E /* UIButton+AppearanceRoundable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+AppearanceRoundable.swift"; sourceTree = "<group>"; };
 		1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+DeinitObservable.swift"; sourceTree = "<group>"; };
 		1BF39BA21F516B0500E1B8EE /* BookingReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingReviewViewController.swift; sourceTree = "<group>"; };
 		1BF39BA31F516B0500E1B8EE /* BookingReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingReviewViewController.xib; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		1BF39BB11F516B4100E1B8EE /* PriceSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceSelectionViewController.xib; sourceTree = "<group>"; };
 		1BF39BB41F516B4B00E1B8EE /* RoomSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomSelectionViewController.swift; sourceTree = "<group>"; };
 		1BF39BB51F516B4B00E1B8EE /* RoomSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomSelectionViewController.xib; sourceTree = "<group>"; };
+		1BF39BB81F5174B000E1B8EE /* BookingFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingFlowController.swift; sourceTree = "<group>"; };
+		1BF39BBB1F518E3300E1B8EE /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 		1B5E7B371F4F23C20090F06A /* FlowControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1BF39BBA1F518E1400E1B8EE /* Utilities */,
 				1B5E7B691F4F289D0090F06A /* Extensions */,
 				1B5E7B6A1F4F289D0090F06A /* Flows */,
 				1B5E7B6B1F4F289D0090F06A /* Models */,
@@ -182,6 +189,7 @@
 			children = (
 				1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */,
 				1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */,
+				1BAFE6831F51D85F007CE06E /* UIButton+AppearanceRoundable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 				1B5E7B791F4F29EC0090F06A /* GuestDetailViewController */,
 				1B5E7B7A1F4F29EC0090F06A /* PriceSelectionViewController */,
 				1B5E7B7B1F4F29EC0090F06A /* RoomSelectionViewController */,
+				1BF39BB81F5174B000E1B8EE /* BookingFlowController.swift */,
 			);
 			path = "Booking flow";
 			sourceTree = "<group>";
@@ -376,6 +385,14 @@
 			children = (
 			);
 			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		1BF39BBA1F518E1400E1B8EE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1BF39BBB1F518E3300E1B8EE /* Theme.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,6 +546,7 @@
 				1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */,
 				1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */,
 				1B5E7B391F4F23C20090F06A /* AppDelegate.swift in Sources */,
+				1BAFE6841F51D85F007CE06E /* UIButton+AppearanceRoundable.swift in Sources */,
 				1B5E7B821F4F2AEB0090F06A /* Reservation.swift in Sources */,
 				1B5E7B3B1F4F23C20090F06A /* FirstViewController.swift in Sources */,
 				1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */,
@@ -536,6 +554,8 @@
 				1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */,
 				1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */,
 				1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */,
+				1BF39BBC1F518E3300E1B8EE /* Theme.swift in Sources */,
+				1BF39BB91F5174B000E1B8EE /* BookingFlowController.swift in Sources */,
 				1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */,
 				1BF39BAE1F516B3400E1B8EE /* GuestDetailViewController.swift in Sources */,
 				1B5E7B891F4F2EDC0090F06A /* CountryPickerViewController.swift in Sources */,

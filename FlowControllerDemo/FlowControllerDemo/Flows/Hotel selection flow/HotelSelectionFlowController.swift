@@ -11,11 +11,15 @@ import UIKit
 class HotelSelectionFlowController {
     
     private(set) weak var navigationController: UINavigationController?
+    private(set) weak var parentFlowController: FlowController?
+    private(set) var childFlowController: FlowController?
+    private(set) var router: Router!
     
     var onSelectHotel: ((_ hotelName: String)->Void)?
     
     func start(on navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.router = Router(on: navigationController)
         showHotelSearch()
     }
     
@@ -42,9 +46,14 @@ class HotelSelectionFlowController {
     func showHotelPicker(for countryName: String) {
         let controller: HotelPickerViewController = HotelPickerViewController.loadFromNib()
         controller.countryName = countryName
-        controller.onSelectHotel = onSelectHotel
+        controller.onSelectHotel = { hotelName in
+            let bookingFlowController = BookingFlowController(hotelName: hotelName)
+            bookingFlowController.start(on: self.navigationController!)
+        }
         
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    
     
 }

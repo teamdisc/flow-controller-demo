@@ -16,6 +16,8 @@ class HotelSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Hotel search"
+        self.navigationItem.backBarButtonItem = .defaultBack
     }
 
     @IBAction func pickCountryDidTap(_ sender: Any) {

@@ -27,7 +27,7 @@ class Router {
     //todo:- push(_ pushable: Pushable) instead?
     
     func push(_ viewController: UIViewController, animated: Bool = true) {
-        assert(viewControllers.contains(viewController), "pushing the same view controller twice is not allowed")
+        assert(!viewControllers.contains(viewController), "pushing the same view controller twice is not allowed")
         
         //todo:- check for other cases when deinited
         // when popped, remove the view controller itself from the stack

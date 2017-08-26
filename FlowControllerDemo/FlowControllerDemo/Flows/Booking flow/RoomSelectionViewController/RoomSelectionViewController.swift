@@ -14,14 +14,18 @@ class RoomSelectionViewController: UIViewController {
     @IBOutlet weak var twinRoomButton: UIButton!
     @IBOutlet weak var deluxeRoomButton: UIButton!
     
-
+    var onSelectRoom: ((Room)->Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "Room selection"
+        self.navigationItem.backBarButtonItem = .defaultBack
     }
     
     @IBAction func roomDidTap(_ sender: UIButton) {
+        guard let roomName = sender.titleLabel?.text,
+            let room = Room(rawValue: roomName) else { return }
+        onSelectRoom?(room)
     }
     
 }
