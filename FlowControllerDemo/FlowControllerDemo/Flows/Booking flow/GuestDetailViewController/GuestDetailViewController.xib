@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTS-hM-zsF">
-                    <rect key="frame" x="97" y="435" width="180" height="40"/>
+                    <rect key="frame" x="97" y="450" width="180" height="40"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="180" id="BpO-3o-BSM"/>
@@ -41,23 +41,24 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdE-zP-WTa">
-                    <rect key="frame" x="57" y="195" width="260" height="210"/>
+                    <rect key="frame" x="57" y="180" width="260" height="240"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Prechathavanich" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCI-pO-lpz">
-                            <rect key="frame" x="40" y="90" width="180" height="30"/>
+                            <rect key="frame" x="40" y="100" width="180" height="40"/>
                             <color key="textColor" red="0.2055078447" green="0.28580069540000003" blue="0.36662355070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="next"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="pirush.t@gmail.com" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhB-II-D2v">
-                            <rect key="frame" x="40" y="140" width="180" height="30"/>
+                            <rect key="frame" x="40" y="160" width="180" height="40"/>
                             <color key="textColor" red="0.2055078447" green="0.28580069540000003" blue="0.36662355070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pirush" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlP-VI-hCI">
-                            <rect key="frame" x="40" y="40" width="180" height="30"/>
+                            <rect key="frame" x="40" y="40" width="180" height="40"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Axn-rX-3mS"/>
                                 <constraint firstAttribute="width" constant="180" id="wCk-YO-j73"/>
                             </constraints>
                             <color key="textColor" red="0.20550784468650818" green="0.28580069541931152" blue="0.36662355065345764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,7 +66,7 @@
                             <textInputTraits key="textInputTraits" returnKeyType="next"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.89806292808219179" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.17394059896469116" green="0.24193984270095825" blue="0.31265199184417725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="tlP-VI-hCI" secondAttribute="trailing" constant="40" id="68Y-Ea-Tln"/>
                         <constraint firstItem="fhB-II-D2v" firstAttribute="top" secondItem="qCI-pO-lpz" secondAttribute="bottom" constant="20" id="9yC-CB-enq"/>
@@ -74,7 +75,9 @@
                         <constraint firstItem="fhB-II-D2v" firstAttribute="width" secondItem="qCI-pO-lpz" secondAttribute="width" id="DTb-K9-AHG"/>
                         <constraint firstItem="qCI-pO-lpz" firstAttribute="top" secondItem="tlP-VI-hCI" secondAttribute="bottom" constant="20" id="EKX-zf-fQx"/>
                         <constraint firstAttribute="bottom" secondItem="fhB-II-D2v" secondAttribute="bottom" constant="40" id="NBG-Xr-UAU"/>
+                        <constraint firstItem="qCI-pO-lpz" firstAttribute="height" secondItem="tlP-VI-hCI" secondAttribute="height" id="VWk-L7-qnr"/>
                         <constraint firstItem="tlP-VI-hCI" firstAttribute="top" secondItem="YdE-zP-WTa" secondAttribute="top" constant="40" id="ZgY-rh-TBS"/>
+                        <constraint firstItem="fhB-II-D2v" firstAttribute="height" secondItem="tlP-VI-hCI" secondAttribute="height" id="dDg-u2-IfC"/>
                         <constraint firstItem="fhB-II-D2v" firstAttribute="centerX" secondItem="qCI-pO-lpz" secondAttribute="centerX" id="nSz-xT-IfQ"/>
                         <constraint firstItem="qCI-pO-lpz" firstAttribute="centerX" secondItem="tlP-VI-hCI" secondAttribute="centerX" id="qmd-wq-GU9"/>
                     </constraints>

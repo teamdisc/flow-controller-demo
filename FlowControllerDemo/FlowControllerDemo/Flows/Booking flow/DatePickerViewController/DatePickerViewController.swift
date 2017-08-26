@@ -10,23 +10,23 @@ import UIKit
 
 class DatePickerViewController: UIViewController {
     
-    @IBOutlet weak var todayButton: UIButton!
-    @IBOutlet weak var tomorrowButton: UIButton!
-    @IBOutlet weak var nextWeekButton: UIButton!
+    @IBOutlet weak var oneNightButton: UIButton!
+    @IBOutlet weak var twoNightsButton: UIButton!
+    @IBOutlet weak var threeNightsButton: UIButton!
     
-    var onSelectDate: ((_ date: Date)->Void)?
+    var onSelectNightAmount: ((Int)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func dateDidTap(_ sender: UIButton) {
-        if (sender == todayButton) {
-            onSelectDate?(Date().startOfDay)
-        } else if (sender == tomorrowButton) {
-            onSelectDate?(Date().tomorrow.startOfDay)
-        } else if (sender == nextWeekButton) {
-            onSelectDate?(Date().nextWeek.startOfDay)
+        if (sender == oneNightButton) {
+            onSelectNightAmount?(1)
+        } else if (sender == twoNightsButton) {
+            onSelectNightAmount?(2)
+        } else if (sender == threeNightsButton) {
+            onSelectNightAmount?(3)
         }
     }
     

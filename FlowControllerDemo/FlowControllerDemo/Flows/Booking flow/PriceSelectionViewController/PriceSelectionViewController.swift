@@ -16,8 +16,10 @@ class PriceSelectionViewController: UIViewController {
     @IBOutlet weak var memberPriceLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     
+    //todo:- view model
     var nightAmount: Int = 0
     var room: Room?
+    var isLoggedIn: Bool = false
     
     var onSelectIsMember: ((_ isMember: Bool)->Void)?
     var onSelectLogin: (()->Void)?
@@ -25,7 +27,14 @@ class PriceSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup(with: room, nightAmount: nightAmount)
+        
+        nonMemberPricebutton.setTitleColor(Color.midnightBlue.withAlphaComponent(0.25),
+                                           for: .disabled)
+        memberPriceButton.setTitleColor(Color.midnightBlue.withAlphaComponent(0.25),
+                                        for: .disabled)
     }
+    
+    //MARK:- Private
     
     private func setup(with room: Room?, nightAmount: Int) {
         guard let room = room else {
@@ -33,10 +42,18 @@ class PriceSelectionViewController: UIViewController {
             memberPriceLabel.text = "- Baht"
             return
         }
-        nonMemberPriceLabel.text = room.price(night: nightAmount,
-                                              isMember: false).format(decimal: 2)+" Baht"
-        memberPriceLabel.text = room.price(night: nightAmount).format(decimal: 2)+" Baht"
+        nonMemberPriceLabel.text = room.price(night: nightAmount).format(decimal: 2)+" Baht"
+        memberPriceLabel.text = room.price(night: nightAmount,
+                                           isMember: true).format(decimal: 2)+" Baht"
     }
+    
+    private func enableLogin(_ isLoggedIn: Bool) {
+        nonMemberPricebutton.isEnabled = !isLoggedIn
+        memberPriceButton.isEnabled = isLoggedIn
+        loginButton.isHidden = isLoggedIn
+    }
+    
+    //MARK:- IBAction handler
     
     @IBAction func nonMemberPriceDidTap(_ sender: UIButton) {
         onSelectIsMember?(false)

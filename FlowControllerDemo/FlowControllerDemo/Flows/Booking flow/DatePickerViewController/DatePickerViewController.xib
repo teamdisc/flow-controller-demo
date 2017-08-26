@@ -11,9 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerViewController" customModule="FlowControllerDemo" customModuleProvider="target">
             <connections>
-                <outlet property="nextWeekButton" destination="VKC-Jq-x78" id="sv7-P8-589"/>
-                <outlet property="todayButton" destination="Hgu-Z9-G7U" id="PE9-2S-sHv"/>
-                <outlet property="tomorrowButton" destination="5qb-uU-Umd" id="reb-B7-nnB"/>
+                <outlet property="oneNightButton" destination="Hgu-Z9-G7U" id="SaH-Rc-woj"/>
+                <outlet property="threeNightsButton" destination="VKC-Jq-x78" id="4ND-vh-rMB"/>
+                <outlet property="twoNightsButton" destination="5qb-uU-Umd" id="kC6-AD-Lln"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,7 +30,7 @@
                         <constraint firstAttribute="width" constant="180" id="t2p-l2-3GD"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                    <state key="normal" title="tomorrow">
+                    <state key="normal" title="2 nights">
                         <color key="titleColor" red="0.20550784468650818" green="0.28580069541931152" blue="0.36662355065345764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -41,7 +41,7 @@
                     <rect key="frame" x="97" y="243" width="180" height="40"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                    <state key="normal" title="today">
+                    <state key="normal" title="1 night">
                         <color key="titleColor" red="0.20550784468650818" green="0.28580069541931152" blue="0.36662355065345764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -52,7 +52,7 @@
                     <rect key="frame" x="97" y="383" width="180" height="40"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                    <state key="normal" title="next week">
+                    <state key="normal" title="3 nights">
                         <color key="titleColor" red="0.20550784468650818" green="0.28580069541931152" blue="0.36662355065345764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>

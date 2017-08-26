@@ -36,8 +36,9 @@ class GuestDetailViewController: UIViewController {
         
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        applyGuest()
         onDidDisappear?(guest)
     }
     
@@ -58,8 +59,15 @@ class GuestDetailViewController: UIViewController {
         emailTextField.text = guest.email
     }
     
+    private func applyGuest() {
+        guest.firstName = firstNameTextField.text ?? ""
+        guest.lastName = lastNameTextField.text ?? ""
+        guest.email = emailTextField.text ?? ""
+    }
+    
     fileprivate func complete() {
         //todo:- validate
+        applyGuest()
         onDidDisappear = nil
         onCompleteGuestDetail?(guest)
     }

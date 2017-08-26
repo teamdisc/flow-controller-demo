@@ -10,10 +10,20 @@ import Foundation
 
 struct Reservation {
     
-    var date: Date?
+    let hotelName: String
+    
+    var nightAmount: Int = 0
     var room: Room?
-    var price: Double = 0.0
     var guest: Guest = Guest()
+    var isMember: Bool = false
+    
+    var price: Double {
+        return room?.price(night: nightAmount, isMember: isMember) ?? 0.0
+    }
+    
+    init(hotelName: String) {
+        self.hotelName = hotelName
+    }
     
 }
 
