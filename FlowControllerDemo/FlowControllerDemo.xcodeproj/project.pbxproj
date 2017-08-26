@@ -27,6 +27,16 @@
 		1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8A1F50AE06003AE998 /* Router.swift */; };
 		1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */; };
 		1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */; };
+		1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA21F516B0500E1B8EE /* BookingReviewViewController.swift */; };
+		1BF39BA51F516B0500E1B8EE /* BookingReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BA31F516B0500E1B8EE /* BookingReviewViewController.xib */; };
+		1BF39BA81F516B1000E1B8EE /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA61F516B1000E1B8EE /* DatePickerViewController.swift */; };
+		1BF39BA91F516B1000E1B8EE /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BA71F516B1000E1B8EE /* DatePickerViewController.xib */; };
+		1BF39BAE1F516B3400E1B8EE /* GuestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BAC1F516B3400E1B8EE /* GuestDetailViewController.swift */; };
+		1BF39BAF1F516B3400E1B8EE /* GuestDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BAD1F516B3400E1B8EE /* GuestDetailViewController.xib */; };
+		1BF39BB21F516B4100E1B8EE /* PriceSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BB01F516B4100E1B8EE /* PriceSelectionViewController.swift */; };
+		1BF39BB31F516B4100E1B8EE /* PriceSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BB11F516B4100E1B8EE /* PriceSelectionViewController.xib */; };
+		1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BB41F516B4B00E1B8EE /* RoomSelectionViewController.swift */; };
+		1BF39BB71F516B4B00E1B8EE /* RoomSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BB51F516B4B00E1B8EE /* RoomSelectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +83,16 @@
 		1B8DDF8A1F50AE06003AE998 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+DeinitObservable.swift"; sourceTree = "<group>"; };
+		1BF39BA21F516B0500E1B8EE /* BookingReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingReviewViewController.swift; sourceTree = "<group>"; };
+		1BF39BA31F516B0500E1B8EE /* BookingReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingReviewViewController.xib; sourceTree = "<group>"; };
+		1BF39BA61F516B1000E1B8EE /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		1BF39BA71F516B1000E1B8EE /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		1BF39BAC1F516B3400E1B8EE /* GuestDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestDetailViewController.swift; sourceTree = "<group>"; };
+		1BF39BAD1F516B3400E1B8EE /* GuestDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuestDetailViewController.xib; sourceTree = "<group>"; };
+		1BF39BB01F516B4100E1B8EE /* PriceSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSelectionViewController.swift; sourceTree = "<group>"; };
+		1BF39BB11F516B4100E1B8EE /* PriceSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceSelectionViewController.xib; sourceTree = "<group>"; };
+		1BF39BB41F516B4B00E1B8EE /* RoomSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomSelectionViewController.swift; sourceTree = "<group>"; };
+		1BF39BB51F516B4B00E1B8EE /* RoomSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomSelectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +301,8 @@
 		1B5E7B771F4F29EC0090F06A /* BookingReviewViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1BF39BA21F516B0500E1B8EE /* BookingReviewViewController.swift */,
+				1BF39BA31F516B0500E1B8EE /* BookingReviewViewController.xib */,
 			);
 			path = BookingReviewViewController;
 			sourceTree = "<group>";
@@ -288,6 +310,8 @@
 		1B5E7B781F4F29EC0090F06A /* DatePickerViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1BF39BA61F516B1000E1B8EE /* DatePickerViewController.swift */,
+				1BF39BA71F516B1000E1B8EE /* DatePickerViewController.xib */,
 			);
 			path = DatePickerViewController;
 			sourceTree = "<group>";
@@ -295,6 +319,8 @@
 		1B5E7B791F4F29EC0090F06A /* GuestDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1BF39BAC1F516B3400E1B8EE /* GuestDetailViewController.swift */,
+				1BF39BAD1F516B3400E1B8EE /* GuestDetailViewController.xib */,
 			);
 			path = GuestDetailViewController;
 			sourceTree = "<group>";
@@ -302,6 +328,8 @@
 		1B5E7B7A1F4F29EC0090F06A /* PriceSelectionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1BF39BB01F516B4100E1B8EE /* PriceSelectionViewController.swift */,
+				1BF39BB11F516B4100E1B8EE /* PriceSelectionViewController.xib */,
 			);
 			path = PriceSelectionViewController;
 			sourceTree = "<group>";
@@ -309,6 +337,8 @@
 		1B5E7B7B1F4F29EC0090F06A /* RoomSelectionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1BF39BB41F516B4B00E1B8EE /* RoomSelectionViewController.swift */,
+				1BF39BB51F516B4B00E1B8EE /* RoomSelectionViewController.xib */,
 			);
 			path = RoomSelectionViewController;
 			sourceTree = "<group>";
@@ -458,12 +488,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF39BA91F516B1000E1B8EE /* DatePickerViewController.xib in Resources */,
 				1B5E7B8A1F4F2EDC0090F06A /* CountryPickerViewController.xib in Resources */,
 				1B5E7B451F4F23C20090F06A /* LaunchScreen.storyboard in Resources */,
+				1BF39BB71F516B4B00E1B8EE /* RoomSelectionViewController.xib in Resources */,
 				1B5E7B421F4F23C20090F06A /* Assets.xcassets in Resources */,
+				1BF39BB31F516B4100E1B8EE /* PriceSelectionViewController.xib in Resources */,
+				1BF39BA51F516B0500E1B8EE /* BookingReviewViewController.xib in Resources */,
 				1B5E7B401F4F23C20090F06A /* Main.storyboard in Resources */,
 				1B5E7B861F4F2B2F0090F06A /* HotelSearchViewController.xib in Resources */,
 				1B5E7B901F4F31370090F06A /* HotelPickerViewController.xib in Resources */,
+				1BF39BAF1F516B3400E1B8EE /* GuestDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,14 +525,19 @@
 			files = (
 				1B5E7B8F1F4F31370090F06A /* HotelPickerViewController.swift in Sources */,
 				1B5E7B3D1F4F23C20090F06A /* SecondViewController.swift in Sources */,
+				1BF39BA81F516B1000E1B8EE /* DatePickerViewController.swift in Sources */,
 				1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */,
 				1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */,
 				1B5E7B391F4F23C20090F06A /* AppDelegate.swift in Sources */,
 				1B5E7B821F4F2AEB0090F06A /* Reservation.swift in Sources */,
 				1B5E7B3B1F4F23C20090F06A /* FirstViewController.swift in Sources */,
 				1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */,
+				1BF39BB21F516B4100E1B8EE /* PriceSelectionViewController.swift in Sources */,
+				1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */,
 				1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */,
 				1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */,
+				1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */,
+				1BF39BAE1F516B3400E1B8EE /* GuestDetailViewController.swift in Sources */,
 				1B5E7B891F4F2EDC0090F06A /* CountryPickerViewController.swift in Sources */,
 				1B5E7B921F4F33E80090F06A /* HotelSelectionFlowController.swift in Sources */,
 			);
