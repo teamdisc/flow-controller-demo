@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="loginButton" destination="NWb-lM-1pJ" id="oBH-G3-9F1"/>
                 <outlet property="memberPriceButton" destination="bRA-jQ-Uyc" id="DaS-h1-h1w"/>
+                <outlet property="memberPriceLabel" destination="VV2-LR-0P7" id="GT9-sr-r41"/>
+                <outlet property="nonMemberPriceLabel" destination="hZg-8L-kgA" id="E6g-za-r0h"/>
                 <outlet property="nonMemberPricebutton" destination="CEC-Fl-JT0" id="0Ls-ce-CCe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,7 +40,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEC-Fl-JT0">
-                    <rect key="frame" x="97.5" y="243.5" width="180" height="40"/>
+                    <rect key="frame" x="97.5" y="229.5" width="180" height="40"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                     <state key="normal" title="Non-member price">
@@ -49,7 +51,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWb-lM-1pJ">
-                    <rect key="frame" x="97" y="383.5" width="180" height="40"/>
+                    <rect key="frame" x="97" y="393.5" width="180" height="40"/>
                     <color key="backgroundColor" red="0.088748745620250702" green="0.6263432502746582" blue="0.5207551121711731" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
                     <state key="normal" title="login">
@@ -60,19 +62,35 @@
                         <action selector="nonMemberPriceDidTap:" destination="-1" eventType="touchUpInside" id="xIZ-Js-TgP"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120.0 Baht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZg-8L-kgA">
+                    <rect key="frame" x="151.5" y="273.5" width="71" height="19.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.0 Baht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-LR-0P7">
+                    <rect key="frame" x="152" y="357.5" width="71" height="19.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="bRA-jQ-Uyc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4fq-D4-hzv"/>
-                <constraint firstItem="bRA-jQ-Uyc" firstAttribute="top" secondItem="CEC-Fl-JT0" secondAttribute="bottom" constant="30" id="4qm-7T-xWu"/>
+                <constraint firstItem="bRA-jQ-Uyc" firstAttribute="top" secondItem="CEC-Fl-JT0" secondAttribute="bottom" constant="44" id="4qm-7T-xWu"/>
                 <constraint firstItem="CEC-Fl-JT0" firstAttribute="centerX" secondItem="bRA-jQ-Uyc" secondAttribute="centerX" id="CHZ-e1-g1X"/>
+                <constraint firstItem="VV2-LR-0P7" firstAttribute="centerX" secondItem="bRA-jQ-Uyc" secondAttribute="centerX" id="UyS-Pk-Rlo"/>
+                <constraint firstItem="hZg-8L-kgA" firstAttribute="top" secondItem="CEC-Fl-JT0" secondAttribute="bottom" constant="4" id="ZDK-ku-xbR"/>
                 <constraint firstItem="NWb-lM-1pJ" firstAttribute="centerX" secondItem="bRA-jQ-Uyc" secondAttribute="centerX" id="eWW-fx-6Gg"/>
                 <constraint firstItem="NWb-lM-1pJ" firstAttribute="height" secondItem="bRA-jQ-Uyc" secondAttribute="height" id="gDA-li-oDC"/>
-                <constraint firstItem="NWb-lM-1pJ" firstAttribute="top" secondItem="bRA-jQ-Uyc" secondAttribute="bottom" constant="30" id="m0N-q5-7Y5"/>
+                <constraint firstItem="NWb-lM-1pJ" firstAttribute="top" secondItem="bRA-jQ-Uyc" secondAttribute="bottom" constant="40" id="m0N-q5-7Y5"/>
                 <constraint firstItem="CEC-Fl-JT0" firstAttribute="height" secondItem="bRA-jQ-Uyc" secondAttribute="height" id="mB6-Yq-4pN"/>
+                <constraint firstItem="VV2-LR-0P7" firstAttribute="top" secondItem="bRA-jQ-Uyc" secondAttribute="bottom" constant="4" id="nXR-pU-mHP"/>
                 <constraint firstItem="NWb-lM-1pJ" firstAttribute="width" secondItem="bRA-jQ-Uyc" secondAttribute="width" id="pnN-FS-qWS"/>
                 <constraint firstItem="CEC-Fl-JT0" firstAttribute="width" secondItem="bRA-jQ-Uyc" secondAttribute="width" id="sWH-ao-l5n"/>
                 <constraint firstItem="bRA-jQ-Uyc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uFK-nG-aHc"/>
+                <constraint firstItem="hZg-8L-kgA" firstAttribute="centerX" secondItem="CEC-Fl-JT0" secondAttribute="centerX" id="zC4-WL-2D1"/>
             </constraints>
         </view>
     </objects>
