@@ -51,9 +51,9 @@ class Router {
         let wasPresented = (navigationController.presentingViewController != nil)
             && (navigationController.viewControllers.count == viewControllers.count)
         if wasPresented {
-            
+            navigationController.dismiss(animated: animated, completion: onDismiss)
         } else {
-            
+            setViewControllers([], animated: animated)
         }
     }
     
@@ -61,9 +61,9 @@ class Router {
     
     func setViewControllers(_ viewControllers: [UIViewController], animated: Bool = true) {
         var currentViewControllers = navigationController.viewControllers
-        guard (viewControllers.count > 0),
-            let firstIndex = currentViewControllers.index(of: viewControllers.first!),
-            let lastIndex = currentViewControllers.index(of: viewControllers.last!) else { return }
+        guard (self.viewControllers.count > 0),
+            let firstIndex = currentViewControllers.index(of: self.viewControllers.first!),
+            let lastIndex = currentViewControllers.index(of: self.viewControllers.last!) else { return }
         currentViewControllers.replaceSubrange(firstIndex...lastIndex, with: viewControllers)
         navigationController.setViewControllers(currentViewControllers, animated: animated)
     }
