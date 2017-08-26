@@ -24,6 +24,9 @@
 		1B5E7B901F4F31370090F06A /* HotelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B8E1F4F31370090F06A /* HotelPickerViewController.xib */; };
 		1B5E7B921F4F33E80090F06A /* HotelSelectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B911F4F33E80090F06A /* HotelSelectionFlowController.swift */; };
 		1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */; };
+		1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8A1F50AE06003AE998 /* Router.swift */; };
+		1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */; };
+		1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		1B5E7B8E1F4F31370090F06A /* HotelPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotelPickerViewController.xib; sourceTree = "<group>"; };
 		1B5E7B911F4F33E80090F06A /* HotelSelectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelSelectionFlowController.swift; sourceTree = "<group>"; };
 		1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NibInstantiable.swift"; sourceTree = "<group>"; };
+		1B8DDF8A1F50AE06003AE998 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+DeinitObservable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */,
+				1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,6 +174,7 @@
 				1B5E7B701F4F28E60090F06A /* Authentication flow */,
 				1B5E7B711F4F28E60090F06A /* Booking flow */,
 				1B5E7B721F4F28E60090F06A /* Hotel selection flow */,
+				1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 		1B5E7B6D1F4F289D0090F06A /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				1B8DDF8A1F50AE06003AE998 /* Router.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -481,10 +490,13 @@
 			files = (
 				1B5E7B8F1F4F31370090F06A /* HotelPickerViewController.swift in Sources */,
 				1B5E7B3D1F4F23C20090F06A /* SecondViewController.swift in Sources */,
+				1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */,
+				1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */,
 				1B5E7B391F4F23C20090F06A /* AppDelegate.swift in Sources */,
 				1B5E7B821F4F2AEB0090F06A /* Reservation.swift in Sources */,
 				1B5E7B3B1F4F23C20090F06A /* FirstViewController.swift in Sources */,
 				1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */,
+				1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */,
 				1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */,
 				1B5E7B891F4F2EDC0090F06A /* CountryPickerViewController.swift in Sources */,
 				1B5E7B921F4F33E80090F06A /* HotelSelectionFlowController.swift in Sources */,
@@ -738,6 +750,7 @@
 				1B5E7B611F4F23C20090F06A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B5E7B621F4F23C20090F06A /* Build configuration list for PBXNativeTarget "FlowControllerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -746,6 +759,7 @@
 				1B5E7B641F4F23C20090F06A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B5E7B651F4F23C20090F06A /* Build configuration list for PBXNativeTarget "FlowControllerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -754,6 +768,7 @@
 				1B5E7B671F4F23C20090F06A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
