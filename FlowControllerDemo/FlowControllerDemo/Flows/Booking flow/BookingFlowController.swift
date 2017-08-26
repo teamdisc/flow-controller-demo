@@ -17,8 +17,8 @@ class BookingFlowController {
     
     var onCompleteBooking: (()->Void)? //todo:- booking
     
-    init(hotelName: String) {
-        reservation = Reservation(hotelName: hotelName)
+    init(hotel: Hotel) {
+        reservation = Reservation(hotel: hotel)
     }
     
     func start(on navigationController: UINavigationController) {

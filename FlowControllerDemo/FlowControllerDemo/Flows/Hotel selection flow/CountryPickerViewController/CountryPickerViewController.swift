@@ -14,7 +14,7 @@ class CountryPickerViewController: UIViewController {
     @IBOutlet weak var germanyButton: UIButton!
     @IBOutlet weak var thailandButton: UIButton!
     
-    var onSelectCountry: ((_ countryName: String)->Void)?
+    var onSelectCountry: ((Country)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,9 @@ class CountryPickerViewController: UIViewController {
     }
     
     @IBAction func countryDidTap(_ sender: UIButton) {
-        onSelectCountry?(sender.titleLabel?.text ?? "")
+        if let country = Country(rawValue: sender.titleLabel?.text ?? "") {
+            onSelectCountry?(country)
+        }
     }
     
 }

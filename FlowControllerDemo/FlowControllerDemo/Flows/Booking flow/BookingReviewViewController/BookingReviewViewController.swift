@@ -39,10 +39,18 @@ class BookingReviewViewController: UIViewController {
                                NSParagraphStyleAttributeName: itemParagraphStyle]
         let itemAttributes = [NSFontAttributeName: Font.regular(of: 16)]
         
+        // set hotel
+        let hotelAttributedString = generateAttributedString(title: "hotel",
+                                                             detail: reservation.hotel.name,
+                                                             titleAttributes: titleAttributes,
+                                                             detailAttributes: itemAttributes)
+        attributedString.append(hotelAttributedString)
+        attributedString.append(.paragraphBreak)
+        
         // set guest
         let guestText = reservation.guest.firstName + " " + reservation.guest.lastName
         let guestAttributedString = generateAttributedString(title: "guest",
-                                                             detail: guestText,
+                                                             detail: guestText.capitalized,
                                                              titleAttributes: titleAttributes,
                                                              detailAttributes: itemAttributes)
         attributedString.append(guestAttributedString)
@@ -66,6 +74,15 @@ class BookingReviewViewController: UIViewController {
                                                                   titleAttributes: titleAttributes,
                                                                   detailAttributes: itemAttributes)
             attributedString.append(nightsAttributedString)
+            attributedString.append(.paragraphBreak)
+        }
+        
+        if let promotion = reservation.promotion {
+            let promotionAttributedString = generateAttributedString(title: "promotion",
+                                                                     detail: promotion.name,
+                                                                     titleAttributes: titleAttributes,
+                                                                     detailAttributes: itemAttributes)
+            attributedString.append(promotionAttributedString)
             attributedString.append(.paragraphBreak)
         }
         

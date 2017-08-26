@@ -6,23 +6,22 @@
 //  Copyright © 2017 Pirush Prechathavanich. All rights reserved.
 //
 
-import Foundation
-
 struct Reservation {
     
-    let hotelName: String
+    let hotel: Hotel
     
     var nightAmount: Int = 0
     var room: Room?
     var guest: Guest = Guest()
+    var promotion: Promotion?
     var isMember: Bool = false
     
     var price: Double {
-        return room?.price(night: nightAmount, isMember: isMember) ?? 0.0
+        return room?.price(night: nightAmount, isMember: isMember, promotion: promotion) ?? 0.0
     }
     
-    init(hotelName: String) {
-        self.hotelName = hotelName
+    init(hotel: Hotel) {
+        self.hotel = hotel
     }
     
 }
@@ -55,9 +54,10 @@ enum Room: StringLiteralType {
         }
     }
     
-    func price(night: Int, isMember: Bool = false) -> Double {
+    func price(night: Int, isMember: Bool = false, promotion: Promotion? = nil) -> Double {
         let totalPrice = self.pricePerNight * Double(night)
         let discount = isMember ? self.memberDiscountPerNight * Double(night) : 0.0
-        return totalPrice-discount
+        let promotionDiscount = (promotion != nil) ? promotion!.discountPerNight * Double(night) : 0.0
+        return totalPrice-discount-promotionDiscount
     }
 }

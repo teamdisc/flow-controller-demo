@@ -15,7 +15,7 @@ class HotelSelectionFlowController {
     private(set) var childFlowController: FlowController?
     private(set) var router: Router!
     
-    var onSelectHotel: ((_ hotelName: String)->Void)?
+    var onSelectHotel: ((_ hotel: Hotel)->Void)?
     
     func start(on navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -36,18 +36,18 @@ class HotelSelectionFlowController {
     func showCountryPicker() {
         let controller: CountryPickerViewController = CountryPickerViewController.loadFromNib()
         
-        controller.onSelectCountry = { countryName in
-            self.showHotelPicker(for: countryName)
+        controller.onSelectCountry = { country in
+            self.showHotelPicker(for: country)
         }
         
         navigationController?.pushViewController(controller, animated: true)
     }
     
-    func showHotelPicker(for countryName: String) {
+    func showHotelPicker(for country: Country) {
         let controller: HotelPickerViewController = HotelPickerViewController.loadFromNib()
-        controller.countryName = countryName
-        controller.onSelectHotel = { hotelName in
-            let bookingFlowController = BookingFlowController(hotelName: hotelName)
+        controller.country = country
+        controller.onSelectHotel = { hotel in
+            let bookingFlowController = BookingFlowController(hotel: hotel)
             bookingFlowController.start(on: self.navigationController!)
         }
         
