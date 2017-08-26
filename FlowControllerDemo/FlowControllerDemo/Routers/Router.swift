@@ -65,6 +65,7 @@ class Router {
             let firstIndex = currentViewControllers.index(of: viewControllers.first!),
             let lastIndex = currentViewControllers.index(of: viewControllers.last!) else { return }
         currentViewControllers.replaceSubrange(firstIndex...lastIndex, with: viewControllers)
+        navigationController.setViewControllers(currentViewControllers, animated: animated)
     }
     
 }

@@ -20,16 +20,14 @@ class PromotionFlowController {
     func start(on navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.router = Router(on: navigationController)
-        
+        showPromotions()
     }
     
     func showPromotions() {
         let controller: PromotionsViewController = PromotionsViewController.loadFromNib()
         
-        controller.onSelectCountry = { country in
-            if let hotel = country.hotels.filter({ $0.promotion != nil }).first {
-                self.showPromotionDetail(for: hotel)
-            }
+        controller.onSelectHotel = { hotel in
+            self.showPromotionDetail(for: hotel)
         }
         router.push(controller)
     }
@@ -38,7 +36,10 @@ class PromotionFlowController {
         let controller: PromotionDetailViewController = PromotionDetailViewController.loadFromNib()
         controller.hotel = hotel
         controller.onSelectBookNow = { hotel in
-            let bookingFlowController = BookingFlowController(hotel: hotel)
+            let bookingFlowController = BookingFlowController(hotel: hotel, selectPromotion: true)
+            bookingFlowController.onCompleteBooking = {
+                self.router.setViewControllers([])
+            }
             bookingFlowController.start(on: self.navigationController!)
         }
         router.push(controller)

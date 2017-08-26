@@ -35,9 +35,9 @@ class BookingReviewViewController: UIViewController {
                                                                       NSParagraphStyleAttributeName: paragraphStyle])
         let itemParagraphStyle = NSMutableParagraphStyle()
         itemParagraphStyle.lineSpacing = 2.0
-        let titleAttributes = [NSFontAttributeName: Font.medium(of: 16),
+        let titleAttributes = [NSFontAttributeName: Font.medium(of: 15),
                                NSParagraphStyleAttributeName: itemParagraphStyle]
-        let itemAttributes = [NSFontAttributeName: Font.regular(of: 16)]
+        let itemAttributes = [NSFontAttributeName: Font.regular(of: 14)]
         
         // set hotel
         let hotelAttributedString = NSAttributedString.generate(title: "hotel",

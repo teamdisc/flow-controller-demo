@@ -14,20 +14,24 @@ class PromotionsViewController: UIViewController {
     @IBOutlet weak var austriaPromotionButton: UIButton!
     @IBOutlet weak var thailandPromotionButton: UIButton!
     
-    let countries: [Country] = [.germany, .austria, .thailand]
-    var onSelectCountry: ((Country)->Void)?
+    let hotels: [Hotel] = [.berlin, .vienna, .bangkok]
+    var onSelectHotel: ((Hotel)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        germanyPromotionButton.setTitle(Promotion.berlin.name, for: .normal)
-        austriaPromotionButton.setTitle(Promotion.vienna.name, for: .normal)
-        thailandPromotionButton.setTitle(Promotion.bangkok.name, for: .normal)
+        self.navigationItem.title = "Promotions"
+        self.navigationItem.backBarButtonItem = .defaultBack
+        
+        germanyPromotionButton.setTitle(Promotion.nightInBerlin.name, for: .normal)
+        austriaPromotionButton.setTitle(Promotion.dayInVienna.name, for: .normal)
+        thailandPromotionButton.setTitle(Promotion.momentInBangkok.name, for: .normal)
     }
     
     @IBAction func promotionDidTap(_ sender: UIButton) {
-        countries.forEach { country in
-            if (sender.titleLabel?.text?.contains(country.rawValue)) == true {
-                onSelectCountry?(country)
+        hotels.forEach { hotel in
+            if let promotionName = sender.titleLabel?.text,
+                promotionName.contains(hotel.city) {
+                onSelectHotel?(hotel)
                 return
             }
         }

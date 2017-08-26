@@ -19,6 +19,9 @@ class PromotionDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Promotion detail"
+        self.navigationItem.backBarButtonItem = .defaultBack
+        detailView.layer.cornerRadius = 8.0
         
         if let hotel = hotel {
             setup(with: hotel)
@@ -30,16 +33,19 @@ class PromotionDetailViewController: UIViewController {
     private func setup(with hotel: Hotel) {
         guard let promotion = hotel.promotion else { return }
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 8.0
-        let attributedString = NSMutableAttributedString(string: promotion.name,
-                                                         attributes: [NSFontAttributeName: Font.demiBold(of: 16),
-                                                                      NSParagraphStyleAttributeName: paragraphStyle])
+        paragraphStyle.paragraphSpacing = 8.0
+        let attributedString = NSMutableAttributedString(string: promotion.name+"\n",
+                                                         attributes: [NSFontAttributeName: Font.demiBold(of: 17),
+                                                                      NSParagraphStyleAttributeName: paragraphStyle.copy()])
         
-        let itemParagraphStyle = NSMutableParagraphStyle()
-        itemParagraphStyle.lineSpacing = 2.0
+        paragraphStyle.paragraphSpacing = 2.0
         let titleAttributes = [NSFontAttributeName: Font.medium(of: 16),
-                               NSParagraphStyleAttributeName: itemParagraphStyle]
+                               NSParagraphStyleAttributeName: paragraphStyle.copy()]
         let itemAttributes = [NSFontAttributeName: Font.regular(of: 16)]
+        
+        paragraphStyle.firstLineHeadIndent = 12.0
+        let descriptionAttributes = [NSFontAttributeName: Font.regular(of: 14),
+                                     NSParagraphStyleAttributeName: paragraphStyle.copy()]
         
         
         // set hotel
@@ -61,9 +67,8 @@ class PromotionDetailViewController: UIViewController {
         
         // set description
         let detailAttributedString = NSAttributedString(string: promotion.description,
-                                                        attributes: itemAttributes)
+                                                        attributes: descriptionAttributes)
         attributedString.append(detailAttributedString)
-        attributedString.append(.paragraphBreak)
         
         detailLabel.attributedText = attributedString
     }
