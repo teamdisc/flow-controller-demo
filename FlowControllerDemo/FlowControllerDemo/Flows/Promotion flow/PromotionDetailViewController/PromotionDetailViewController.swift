@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PromotionDetailViewController: UIViewController {
+class PromotionDetailViewController: BaseViewController {
 
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var detailLabel: UILabel!
@@ -20,7 +20,6 @@ class PromotionDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Promotion detail"
-        self.navigationItem.backBarButtonItem = .defaultBack
         detailView.layer.cornerRadius = 8.0
         
         if let hotel = hotel {

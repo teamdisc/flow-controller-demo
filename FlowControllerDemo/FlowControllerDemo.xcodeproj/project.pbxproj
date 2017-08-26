@@ -26,6 +26,7 @@
 		1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */; };
 		1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8A1F50AE06003AE998 /* Router.swift */; };
 		1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */; };
+		1B9FFCA61F522BF100F96BD9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FFCA51F522BF100F96BD9 /* BaseViewController.swift */; };
 		1BAFE6841F51D85F007CE06E /* UIButton+AppearanceRoundable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFE6831F51D85F007CE06E /* UIButton+AppearanceRoundable.swift */; };
 		1BAFE6881F51FA04007CE06E /* ApplicationFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFE6871F51FA04007CE06E /* ApplicationFlowController.swift */; };
 		1BAFE6921F51FC4A007CE06E /* PromotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFE6901F51FC4A007CE06E /* PromotionsViewController.swift */; };
@@ -92,6 +93,7 @@
 		1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NibInstantiable.swift"; sourceTree = "<group>"; };
 		1B8DDF8A1F50AE06003AE998 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		1B9FFCA51F522BF100F96BD9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1BAFE6831F51D85F007CE06E /* UIButton+AppearanceRoundable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+AppearanceRoundable.swift"; sourceTree = "<group>"; };
 		1BAFE6871F51FA04007CE06E /* ApplicationFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFlowController.swift; sourceTree = "<group>"; };
 		1BAFE6901F51FC4A007CE06E /* PromotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionsViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				1B5E7B711F4F28E60090F06A /* Booking flow */,
 				1B5E7B721F4F28E60090F06A /* Hotel selection flow */,
 				1BAFE6891F51FB6B007CE06E /* Promotion flow */,
+				1B9FFCA51F522BF100F96BD9 /* BaseViewController.swift */,
 				1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */,
 			);
 			path = Flows;
@@ -601,6 +604,7 @@
 				1B5E7B3B1F4F23C20090F06A /* FirstViewController.swift in Sources */,
 				1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */,
 				1BF39BB21F516B4100E1B8EE /* PriceSelectionViewController.swift in Sources */,
+				1B9FFCA61F522BF100F96BD9 /* BaseViewController.swift in Sources */,
 				1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */,
 				1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */,
 				1BAFE6881F51FA04007CE06E /* ApplicationFlowController.swift in Sources */,

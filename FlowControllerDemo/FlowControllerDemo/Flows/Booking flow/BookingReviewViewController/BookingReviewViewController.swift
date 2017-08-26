@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookingReviewViewController: UIViewController {
+class BookingReviewViewController: BaseViewController {
 
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var detailsLabel: UILabel!
@@ -20,7 +20,6 @@ class BookingReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Booking review"
-        self.navigationItem.backBarButtonItem = .defaultBack
         detailsView.layer.cornerRadius = 8.0
         if let reservation = reservation {
             setup(with: reservation) 

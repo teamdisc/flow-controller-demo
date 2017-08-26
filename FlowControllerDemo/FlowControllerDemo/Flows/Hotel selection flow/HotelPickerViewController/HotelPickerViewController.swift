@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HotelPickerViewController: UIViewController {
+class HotelPickerViewController: BaseViewController {
     
     @IBOutlet weak var firstButton: UIButton!
     @IBOutlet weak var secondButton: UIButton!
@@ -20,7 +20,6 @@ class HotelPickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Hotel picker"
-        self.navigationItem.backBarButtonItem = .defaultBack
         
         if let country = country {
             let hotels = country.hotels

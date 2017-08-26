@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PromotionsViewController: UIViewController {
+class PromotionsViewController: BaseViewController {
 
     @IBOutlet weak var germanyPromotionButton: UIButton!
     @IBOutlet weak var austriaPromotionButton: UIButton!
@@ -20,7 +20,6 @@ class PromotionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Promotions"
-        self.navigationItem.backBarButtonItem = .defaultBack
         
         germanyPromotionButton.setTitle(Promotion.nightInBerlin.name, for: .normal)
         austriaPromotionButton.setTitle(Promotion.dayInVienna.name, for: .normal)

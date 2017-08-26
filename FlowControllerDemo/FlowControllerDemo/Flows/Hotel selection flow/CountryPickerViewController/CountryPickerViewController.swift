@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CountryPickerViewController: UIViewController {
+class CountryPickerViewController: BaseViewController {
     
     @IBOutlet weak var austriaButton: UIButton!
     @IBOutlet weak var germanyButton: UIButton!
@@ -19,7 +19,6 @@ class CountryPickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Country picker"
-        self.navigationItem.backBarButtonItem = .defaultBack
     }
     
     @IBAction func countryDidTap(_ sender: UIButton) {

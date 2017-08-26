@@ -47,8 +47,10 @@ class HotelSelectionFlowController {
         let controller: HotelPickerViewController = HotelPickerViewController.loadFromNib()
         controller.country = country
         controller.onSelectHotel = { hotel in
-            let bookingFlowController = BookingFlowController(hotel: hotel)
-            bookingFlowController.start(on: self.navigationController!)
+//            let bookingFlowController = BookingFlowController(hotel: hotel)
+//            bookingFlowController.start(on: self.navigationController!)
+            let promotionFlowController = PromotionFlowController()
+            promotionFlowController.start(on: self.navigationController!)
         }
         
         navigationController?.pushViewController(controller, animated: true)
