@@ -38,6 +38,7 @@
 		1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BB41F516B4B00E1B8EE /* RoomSelectionViewController.swift */; };
 		1BF39BB71F516B4B00E1B8EE /* RoomSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BB51F516B4B00E1B8EE /* RoomSelectionViewController.xib */; };
 		1BF39BB91F5174B000E1B8EE /* BookingFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BB81F5174B000E1B8EE /* BookingFlowController.swift */; };
+		1BF39BBC1F518E3300E1B8EE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BBB1F518E3300E1B8EE /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		1BF39BB41F516B4B00E1B8EE /* RoomSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomSelectionViewController.swift; sourceTree = "<group>"; };
 		1BF39BB51F516B4B00E1B8EE /* RoomSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomSelectionViewController.xib; sourceTree = "<group>"; };
 		1BF39BB81F5174B000E1B8EE /* BookingFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingFlowController.swift; sourceTree = "<group>"; };
+		1BF39BBB1F518E3300E1B8EE /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		1B5E7B371F4F23C20090F06A /* FlowControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1BF39BBA1F518E1400E1B8EE /* Utilities */,
 				1B5E7B691F4F289D0090F06A /* Extensions */,
 				1B5E7B6A1F4F289D0090F06A /* Flows */,
 				1B5E7B6B1F4F289D0090F06A /* Models */,
@@ -381,6 +384,14 @@
 			path = RegisterViewController;
 			sourceTree = "<group>";
 		};
+		1BF39BBA1F518E1400E1B8EE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1BF39BBB1F518E3300E1B8EE /* Theme.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -539,6 +550,7 @@
 				1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */,
 				1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */,
 				1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */,
+				1BF39BBC1F518E3300E1B8EE /* Theme.swift in Sources */,
 				1BF39BB91F5174B000E1B8EE /* BookingFlowController.swift in Sources */,
 				1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */,
 				1BF39BAE1F516B3400E1B8EE /* GuestDetailViewController.swift in Sources */,
