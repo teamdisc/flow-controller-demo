@@ -37,6 +37,7 @@
 		1BF39BB31F516B4100E1B8EE /* PriceSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BB11F516B4100E1B8EE /* PriceSelectionViewController.xib */; };
 		1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BB41F516B4B00E1B8EE /* RoomSelectionViewController.swift */; };
 		1BF39BB71F516B4B00E1B8EE /* RoomSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BB51F516B4B00E1B8EE /* RoomSelectionViewController.xib */; };
+		1BF39BB91F5174B000E1B8EE /* BookingFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BB81F5174B000E1B8EE /* BookingFlowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		1BF39BB11F516B4100E1B8EE /* PriceSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceSelectionViewController.xib; sourceTree = "<group>"; };
 		1BF39BB41F516B4B00E1B8EE /* RoomSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomSelectionViewController.swift; sourceTree = "<group>"; };
 		1BF39BB51F516B4B00E1B8EE /* RoomSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomSelectionViewController.xib; sourceTree = "<group>"; };
+		1BF39BB81F5174B000E1B8EE /* BookingFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 				1B5E7B791F4F29EC0090F06A /* GuestDetailViewController */,
 				1B5E7B7A1F4F29EC0090F06A /* PriceSelectionViewController */,
 				1B5E7B7B1F4F29EC0090F06A /* RoomSelectionViewController */,
+				1BF39BB81F5174B000E1B8EE /* BookingFlowController.swift */,
 			);
 			path = "Booking flow";
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */,
 				1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */,
 				1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */,
+				1BF39BB91F5174B000E1B8EE /* BookingFlowController.swift in Sources */,
 				1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */,
 				1BF39BAE1F516B3400E1B8EE /* GuestDetailViewController.swift in Sources */,
 				1B5E7B891F4F2EDC0090F06A /* CountryPickerViewController.swift in Sources */,
