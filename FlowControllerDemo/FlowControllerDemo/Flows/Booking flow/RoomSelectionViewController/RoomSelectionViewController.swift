@@ -18,6 +18,8 @@ class RoomSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Room selection"
+        self.navigationItem.backBarButtonItem = .defaultBack
     }
     
     @IBAction func roomDidTap(_ sender: UIButton) {

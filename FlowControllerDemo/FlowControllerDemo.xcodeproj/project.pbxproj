@@ -26,6 +26,7 @@
 		1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */; };
 		1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8A1F50AE06003AE998 /* Router.swift */; };
 		1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */; };
+		1BAFE6841F51D85F007CE06E /* UIButton+AppearanceRoundable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFE6831F51D85F007CE06E /* UIButton+AppearanceRoundable.swift */; };
 		1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */; };
 		1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA21F516B0500E1B8EE /* BookingReviewViewController.swift */; };
 		1BF39BA51F516B0500E1B8EE /* BookingReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BA31F516B0500E1B8EE /* BookingReviewViewController.xib */; };
@@ -84,6 +85,7 @@
 		1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NibInstantiable.swift"; sourceTree = "<group>"; };
 		1B8DDF8A1F50AE06003AE998 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1B8DDF8C1F50C7A0003AE998 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		1BAFE6831F51D85F007CE06E /* UIButton+AppearanceRoundable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+AppearanceRoundable.swift"; sourceTree = "<group>"; };
 		1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+DeinitObservable.swift"; sourceTree = "<group>"; };
 		1BF39BA21F516B0500E1B8EE /* BookingReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingReviewViewController.swift; sourceTree = "<group>"; };
 		1BF39BA31F516B0500E1B8EE /* BookingReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingReviewViewController.xib; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				1B5E7B931F4F36F30090F06A /* UIViewController+NibInstantiable.swift */,
 				1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */,
+				1BAFE6831F51D85F007CE06E /* UIButton+AppearanceRoundable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */,
 				1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */,
 				1B5E7B391F4F23C20090F06A /* AppDelegate.swift in Sources */,
+				1BAFE6841F51D85F007CE06E /* UIButton+AppearanceRoundable.swift in Sources */,
 				1B5E7B821F4F2AEB0090F06A /* Reservation.swift in Sources */,
 				1B5E7B3B1F4F23C20090F06A /* FirstViewController.swift in Sources */,
 				1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */,

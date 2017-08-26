@@ -18,6 +18,8 @@ class CountryPickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Country picker"
+        self.navigationItem.backBarButtonItem = .defaultBack
     }
     
     @IBAction func countryDidTap(_ sender: UIButton) {

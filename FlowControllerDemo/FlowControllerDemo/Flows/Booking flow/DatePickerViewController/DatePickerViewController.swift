@@ -18,6 +18,8 @@ class DatePickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Date picker"
+        self.navigationItem.backBarButtonItem = .defaultBack
     }
     
     @IBAction func dateDidTap(_ sender: UIButton) {

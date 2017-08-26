@@ -43,6 +43,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdE-zP-WTa">
                     <rect key="frame" x="57" y="180" width="260" height="240"/>
                     <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pirush" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlP-VI-hCI">
+                            <rect key="frame" x="40" y="40" width="180" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Axn-rX-3mS"/>
+                                <constraint firstAttribute="width" constant="180" id="wCk-YO-j73"/>
+                            </constraints>
+                            <color key="textColor" red="0.20550784468650818" green="0.28580069541931152" blue="0.36662355065345764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                        </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Prechathavanich" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCI-pO-lpz">
                             <rect key="frame" x="40" y="100" width="180" height="40"/>
                             <color key="textColor" red="0.2055078447" green="0.28580069540000003" blue="0.36662355070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,16 +64,6 @@
                             <color key="textColor" red="0.2055078447" green="0.28580069540000003" blue="0.36662355070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue"/>
-                        </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pirush" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlP-VI-hCI">
-                            <rect key="frame" x="40" y="40" width="180" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="Axn-rX-3mS"/>
-                                <constraint firstAttribute="width" constant="180" id="wCk-YO-j73"/>
-                            </constraints>
-                            <color key="textColor" red="0.20550784468650818" green="0.28580069541931152" blue="0.36662355065345764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.17394059896469116" green="0.24193984270095825" blue="0.31265199184417725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

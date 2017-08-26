@@ -26,6 +26,8 @@ class PriceSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Price preview"
+        self.navigationItem.backBarButtonItem = .defaultBack
         setup(with: room, nightAmount: nightAmount)
         
         nonMemberPricebutton.setTitleColor(Color.midnightBlue.withAlphaComponent(0.25),

@@ -24,16 +24,10 @@ class GuestDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Guest information"
+        self.navigationItem.backBarButtonItem = .defaultBack
         setup(with: guest)
-        var tagCount = 0
-        view.subviews
-            .forEach {
-                guard let textField = $0 as? UITextField else { return }
-                textField.delegate = self
-                textField.tag = tagCount
-                tagCount += 1
-            }
-        
+        setupView()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -52,6 +46,18 @@ class GuestDetailViewController: UIViewController {
     }
     
     //MARK:- Private
+    
+    private func setupView() {
+        var tagCount = 0
+        fieldsView.layer.cornerRadius = 8.0
+        fieldsView.subviews
+            .forEach {
+                guard let textField = $0 as? UITextField else { return }
+                textField.delegate = self
+                textField.tag = tagCount
+                tagCount += 1
+        }
+    }
     
     private func setup(with guest: Guest) {
         firstNameTextField.text = guest.firstName
