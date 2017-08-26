@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountryPickerViewController" customModule="FlowControllerDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="austriaButton" destination="6E3-Lq-wzJ" id="IJY-DQ-gkC"/>
+                <outlet property="germanyButton" destination="y0F-Sl-nV0" id="cJt-VK-H9o"/>
+                <outlet property="thailandButton" destination="PiG-l1-Dec" id="lIn-RO-bFU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0F-Sl-nV0">
+                    <rect key="frame" x="112" y="313" width="150" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="bki-JA-Tsz"/>
+                        <constraint firstAttribute="height" constant="40" id="z2m-b2-2ri"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="Germany">
+                        <color key="titleColor" red="0.086807228619999996" green="0.62892097229999999" blue="0.5224745274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="countryDidTap:" destination="-1" eventType="touchUpInside" id="DgG-4T-zdh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiG-l1-Dec">
+                    <rect key="frame" x="112" y="383" width="150" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="4eP-7U-mvs"/>
+                        <constraint firstAttribute="height" constant="40" id="l2m-zp-SbY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="Thailand">
+                        <color key="titleColor" red="0.086807228619999996" green="0.62892097229999999" blue="0.5224745274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="countryDidTap:" destination="-1" eventType="touchUpInside" id="jij-VX-ia7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E3-Lq-wzJ">
+                    <rect key="frame" x="112" y="243" width="150" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="XoA-08-WJk"/>
+                        <constraint firstAttribute="width" constant="150" id="f5O-qm-UOP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="Austria">
+                        <color key="titleColor" red="0.086807228619999996" green="0.62892097229999999" blue="0.5224745274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="countryDidTap:" destination="-1" eventType="touchUpInside" id="xOU-8c-8Xw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.086274509803921567" green="0.62745098039215685" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="y0F-Sl-nV0" firstAttribute="top" secondItem="6E3-Lq-wzJ" secondAttribute="bottom" constant="30" id="2Fk-SP-A6q"/>
+                <constraint firstItem="y0F-Sl-nV0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="7Ss-JH-j3N"/>
+                <constraint firstItem="PiG-l1-Dec" firstAttribute="centerX" secondItem="y0F-Sl-nV0" secondAttribute="centerX" id="dQS-fT-oFv"/>
+                <constraint firstItem="y0F-Sl-nV0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gQi-rs-355"/>
+                <constraint firstItem="PiG-l1-Dec" firstAttribute="top" secondItem="y0F-Sl-nV0" secondAttribute="bottom" constant="30" id="tkm-nq-yj1"/>
+                <constraint firstItem="6E3-Lq-wzJ" firstAttribute="centerX" secondItem="y0F-Sl-nV0" secondAttribute="centerX" id="wO4-5G-abn"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
