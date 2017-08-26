@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PriceSelectionViewController" customModule="FlowControllerDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="NWb-lM-1pJ" id="oBH-G3-9F1"/>
+                <outlet property="memberPriceButton" destination="bRA-jQ-Uyc" id="DaS-h1-h1w"/>
+                <outlet property="nonMemberPricebutton" destination="CEC-Fl-JT0" id="0Ls-ce-CCe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-jQ-Uyc">
+                    <rect key="frame" x="97.5" y="313.5" width="180" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="jl0-Pe-wGB"/>
+                        <constraint firstAttribute="height" constant="40" id="udS-6A-nY2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="Member price">
+                        <color key="titleColor" red="0.2055078447" green="0.28580069540000003" blue="0.36662355070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="memberPriceDidTap:" destination="-1" eventType="touchUpInside" id="yG7-qr-faA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEC-Fl-JT0">
+                    <rect key="frame" x="97.5" y="243.5" width="180" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="Non-member price">
+                        <color key="titleColor" red="0.2055078447" green="0.28580069540000003" blue="0.36662355070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="nonMemberPriceDidTap:" destination="-1" eventType="touchUpInside" id="Zcc-Vg-viV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWb-lM-1pJ">
+                    <rect key="frame" x="97" y="383.5" width="180" height="40"/>
+                    <color key="backgroundColor" red="0.088748745620250702" green="0.6263432502746582" blue="0.5207551121711731" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="login">
+                        <color key="titleColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="loginDidTap:" destination="-1" eventType="touchUpInside" id="x1q-pX-AIG"/>
+                        <action selector="nonMemberPriceDidTap:" destination="-1" eventType="touchUpInside" id="xIZ-Js-TgP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bRA-jQ-Uyc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4fq-D4-hzv"/>
+                <constraint firstItem="bRA-jQ-Uyc" firstAttribute="top" secondItem="CEC-Fl-JT0" secondAttribute="bottom" constant="30" id="4qm-7T-xWu"/>
+                <constraint firstItem="CEC-Fl-JT0" firstAttribute="centerX" secondItem="bRA-jQ-Uyc" secondAttribute="centerX" id="CHZ-e1-g1X"/>
+                <constraint firstItem="NWb-lM-1pJ" firstAttribute="centerX" secondItem="bRA-jQ-Uyc" secondAttribute="centerX" id="eWW-fx-6Gg"/>
+                <constraint firstItem="NWb-lM-1pJ" firstAttribute="height" secondItem="bRA-jQ-Uyc" secondAttribute="height" id="gDA-li-oDC"/>
+                <constraint firstItem="NWb-lM-1pJ" firstAttribute="top" secondItem="bRA-jQ-Uyc" secondAttribute="bottom" constant="30" id="m0N-q5-7Y5"/>
+                <constraint firstItem="CEC-Fl-JT0" firstAttribute="height" secondItem="bRA-jQ-Uyc" secondAttribute="height" id="mB6-Yq-4pN"/>
+                <constraint firstItem="NWb-lM-1pJ" firstAttribute="width" secondItem="bRA-jQ-Uyc" secondAttribute="width" id="pnN-FS-qWS"/>
+                <constraint firstItem="CEC-Fl-JT0" firstAttribute="width" secondItem="bRA-jQ-Uyc" secondAttribute="width" id="sWH-ao-l5n"/>
+                <constraint firstItem="bRA-jQ-Uyc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uFK-nG-aHc"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

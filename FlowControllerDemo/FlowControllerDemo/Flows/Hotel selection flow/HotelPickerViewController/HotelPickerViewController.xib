@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HotelPickerViewController" customModule="FlowControllerDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="firstButton" destination="6DH-H5-8eY" id="Nqe-is-z1J"/>
+                <outlet property="secondButton" destination="suN-29-TlR" id="Av0-A9-6z3"/>
+                <outlet property="thirdButton" destination="rH9-9h-kbC" id="rhs-PC-42b"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suN-29-TlR">
+                    <rect key="frame" x="97.5" y="313.5" width="180" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ow4-Sy-YIQ"/>
+                        <constraint firstAttribute="width" constant="180" id="e0O-6s-1XV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="second">
+                        <color key="titleColor" red="0.086807228619999996" green="0.62892097229999999" blue="0.5224745274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="secondHotelDidTap:" destination="-1" eventType="touchUpInside" id="43k-T6-W3d"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DH-H5-8eY">
+                    <rect key="frame" x="97.5" y="243.5" width="180" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="first">
+                        <color key="titleColor" red="0.086807228619999996" green="0.62892097229999999" blue="0.5224745274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="firstHotelDidTap:" destination="-1" eventType="touchUpInside" id="zGN-Va-QRG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rH9-9h-kbC">
+                    <rect key="frame" x="97.5" y="383.5" width="180" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="third">
+                        <color key="titleColor" red="0.086807228619999996" green="0.62892097229999999" blue="0.5224745274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="thirdHotelDidTap:" destination="-1" eventType="touchUpInside" id="tib-6H-mnR"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.086274509803921567" green="0.62745098039215685" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6DH-H5-8eY" firstAttribute="width" secondItem="suN-29-TlR" secondAttribute="width" id="4Ly-W6-hVQ"/>
+                <constraint firstItem="suN-29-TlR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4jx-Dt-3ci"/>
+                <constraint firstItem="rH9-9h-kbC" firstAttribute="top" secondItem="suN-29-TlR" secondAttribute="bottom" constant="30" id="AdW-Ak-kSX"/>
+                <constraint firstItem="rH9-9h-kbC" firstAttribute="centerX" secondItem="suN-29-TlR" secondAttribute="centerX" id="Ciw-xb-3xo"/>
+                <constraint firstItem="6DH-H5-8eY" firstAttribute="height" secondItem="suN-29-TlR" secondAttribute="height" id="KEb-Dg-Dlh"/>
+                <constraint firstItem="suN-29-TlR" firstAttribute="top" secondItem="6DH-H5-8eY" secondAttribute="bottom" constant="30" id="MD8-5C-Kmb"/>
+                <constraint firstItem="rH9-9h-kbC" firstAttribute="height" secondItem="suN-29-TlR" secondAttribute="height" id="TyN-CK-1rH"/>
+                <constraint firstItem="rH9-9h-kbC" firstAttribute="width" secondItem="suN-29-TlR" secondAttribute="width" id="VFp-ad-b7H"/>
+                <constraint firstItem="6DH-H5-8eY" firstAttribute="centerX" secondItem="suN-29-TlR" secondAttribute="centerX" id="mEm-93-zyr"/>
+                <constraint firstItem="suN-29-TlR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="w0m-oQ-bU7"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerViewController" customModule="FlowControllerDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="nextWeekButton" destination="VKC-Jq-x78" id="sv7-P8-589"/>
+                <outlet property="todayButton" destination="Hgu-Z9-G7U" id="PE9-2S-sHv"/>
+                <outlet property="tomorrowButton" destination="5qb-uU-Umd" id="reb-B7-nnB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-uU-Umd">
+                    <rect key="frame" x="97" y="313" width="180" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="iwq-OJ-MxZ"/>
+                        <constraint firstAttribute="width" constant="180" id="t2p-l2-3GD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="tomorrow">
+                        <color key="titleColor" red="0.20550784468650818" green="0.28580069541931152" blue="0.36662355065345764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="dateDidTap:" destination="-1" eventType="touchUpInside" id="88x-Kg-svX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgu-Z9-G7U">
+                    <rect key="frame" x="97" y="243" width="180" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="today">
+                        <color key="titleColor" red="0.20550784468650818" green="0.28580069541931152" blue="0.36662355065345764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="dateDidTap:" destination="-1" eventType="touchUpInside" id="lhx-2v-u2w"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKC-Jq-x78">
+                    <rect key="frame" x="97" y="383" width="180" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="next week">
+                        <color key="titleColor" red="0.20550784468650818" green="0.28580069541931152" blue="0.36662355065345764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="dateDidTap:" destination="-1" eventType="touchUpInside" id="I9h-aX-LF6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VKC-Jq-x78" firstAttribute="height" secondItem="5qb-uU-Umd" secondAttribute="height" id="4Rj-dd-RpO"/>
+                <constraint firstItem="Hgu-Z9-G7U" firstAttribute="centerX" secondItem="5qb-uU-Umd" secondAttribute="centerX" id="OYq-gX-nfV"/>
+                <constraint firstItem="Hgu-Z9-G7U" firstAttribute="width" secondItem="5qb-uU-Umd" secondAttribute="width" id="Q8B-C6-RrS"/>
+                <constraint firstItem="VKC-Jq-x78" firstAttribute="centerX" secondItem="5qb-uU-Umd" secondAttribute="centerX" id="S9L-m9-N05"/>
+                <constraint firstItem="VKC-Jq-x78" firstAttribute="width" secondItem="5qb-uU-Umd" secondAttribute="width" id="XmE-Wu-F4O"/>
+                <constraint firstItem="VKC-Jq-x78" firstAttribute="top" secondItem="5qb-uU-Umd" secondAttribute="bottom" constant="30" id="fwq-2O-1Nm"/>
+                <constraint firstItem="5qb-uU-Umd" firstAttribute="top" secondItem="Hgu-Z9-G7U" secondAttribute="bottom" constant="30" id="jqc-Ix-hJv"/>
+                <constraint firstItem="5qb-uU-Umd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="k6R-oN-9q2"/>
+                <constraint firstItem="Hgu-Z9-G7U" firstAttribute="height" secondItem="5qb-uU-Umd" secondAttribute="height" id="kQ7-lY-vKV"/>
+                <constraint firstItem="5qb-uU-Umd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sDN-je-Ync"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

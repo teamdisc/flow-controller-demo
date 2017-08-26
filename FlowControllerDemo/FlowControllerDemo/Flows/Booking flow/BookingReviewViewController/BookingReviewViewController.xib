@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingReviewViewController" customModule="FlowControllerDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="bookNowButton" destination="LdA-nP-ltC" id="ntJ-QC-JoO"/>
+                <outlet property="detailsLabel" destination="xcX-DX-q4Y" id="YsE-7X-zaG"/>
+                <outlet property="detailsView" destination="EmC-3V-mhH" id="6iT-bw-Gzg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdA-nP-ltC">
+                    <rect key="frame" x="97.5" y="405" width="180" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="9BF-ma-3Ra"/>
+                        <constraint firstAttribute="height" constant="40" id="XDX-Rw-Wve"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                    <state key="normal" title="Book now!">
+                        <color key="titleColor" red="0.2055078447" green="0.28580069540000003" blue="0.36662355070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="bookNowDidTap:" destination="-1" eventType="touchUpInside" id="kxj-ht-8PO"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmC-3V-mhH">
+                    <rect key="frame" x="67.5" y="293" width="240" height="82"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking review:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcX-DX-q4Y">
+                            <rect key="frame" x="20" y="30" width="200" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="e4m-de-YAH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.89806292809999999" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="xcX-DX-q4Y" firstAttribute="top" secondItem="EmC-3V-mhH" secondAttribute="top" constant="30" id="XVq-Qu-g7V"/>
+                        <constraint firstAttribute="trailing" secondItem="xcX-DX-q4Y" secondAttribute="trailing" constant="20" id="mDW-ej-JhQ"/>
+                        <constraint firstItem="xcX-DX-q4Y" firstAttribute="leading" secondItem="EmC-3V-mhH" secondAttribute="leading" constant="20" id="s3p-wD-RIh"/>
+                        <constraint firstAttribute="bottom" secondItem="xcX-DX-q4Y" secondAttribute="bottom" constant="30" id="zJ0-Uy-bew"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.20484405755996704" green="0.28485706448554993" blue="0.36804154515266418" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LdA-nP-ltC" firstAttribute="top" secondItem="EmC-3V-mhH" secondAttribute="bottom" constant="30" id="2S7-oH-DRT"/>
+                <constraint firstItem="LdA-nP-ltC" firstAttribute="centerX" secondItem="EmC-3V-mhH" secondAttribute="centerX" id="GWe-2e-ipc"/>
+                <constraint firstItem="EmC-3V-mhH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HKO-pI-evj"/>
+                <constraint firstItem="EmC-3V-mhH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YXB-9G-qkH"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
