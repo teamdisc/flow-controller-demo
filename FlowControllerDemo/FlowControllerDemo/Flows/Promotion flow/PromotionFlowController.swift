@@ -28,6 +28,7 @@ class PromotionFlowController {
     func dismissChild() {
         //todo:- iterate to dismiss all flowController of its child
         childFlowController = nil
+        router.navigationController.delegate = router
     }
     
     func showPromotions() {
