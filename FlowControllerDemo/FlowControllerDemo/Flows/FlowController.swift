@@ -32,3 +32,54 @@ class FlowController {
     }
     
 }
+
+protocol FlowControllable {
+    
+    var router: Router { get }
+    
+    var childFlowController: FlowControllable? { get }
+    var parentFlowController: FlowControllable? { get }
+    
+    func start()
+    func dismissChild(animated: Bool)
+    func dismiss(animated: Bool)
+    func proceed(to nextFlowControllable: FlowControllable)
+    
+}
+
+class TestFlowController: FlowControllable {
+    
+    private(set) var childFlowController: FlowControllable?
+    private(set) var parentFlowController: FlowControllable?
+    private(set) var router: Router
+    
+    init(on navigationController: UINavigationController) {
+        router = Router(on: navigationController)
+    }
+    
+    func start() {
+        
+    }
+    
+    func dismissChild(animated: Bool = true) {
+        
+    }
+    
+    func dismiss(animated: Bool = true) {
+        
+    }
+    
+    func proceed(to nextFlowControllable: FlowControllable) {
+        
+    }
+    
+}
+
+extension FlowControllable {
+    
+    func dismiss(animated: Bool = true) {
+        router.dismiss(animated: animated)
+        parentFlowController?.router.navigationController.delegate = router
+    }
+    
+}
