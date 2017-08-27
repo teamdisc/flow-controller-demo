@@ -8,28 +8,12 @@
 
 import UIKit
 
-class PromotionFlowController {
-    
-    private(set) weak var navigationController: UINavigationController?
-    private(set) var router: Router!
-    
-    private(set) var childFlowController: BookingFlowController?
+class PromotionFlowController: FlowController  {
 
     var onSelectBookingWithPromotion: ((Promotion)->Void)?
     
-    //todo:- start with option?
-    
-    func start(on navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.router = Router(on: navigationController)
+    override func start() {
         showPromotions()
-    }
-    
-    func dismissChild() {
-        //todo:- iterate to dismiss all flowController of its child
-        childFlowController?.dismiss(animated: true)
-        childFlowController = nil
-        router.navigationController.delegate = router
     }
     
     func showPromotions() {
@@ -45,15 +29,15 @@ class PromotionFlowController {
         let controller: PromotionDetailViewController = PromotionDetailViewController.loadFromNib()
         controller.hotel = hotel
         controller.onSelectBookNow = { hotel in
-            let bookingFlowController = BookingFlowController(hotel: hotel, selectPromotion: true)
+            let bookingFlowController = BookingFlowController(on: self.router.navigationController,
+                                                              for: .promotion(with: hotel))
             bookingFlowController.onCompleteBooking = {
                 self.dismissChild()
             }
             bookingFlowController.onDismiss = {
                 self.dismissChild()
             }
-            self.childFlowController = bookingFlowController
-            bookingFlowController.start(with: self)
+            self.proceed(to: bookingFlowController)
         }
         router.push(controller)
     }

@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.navigationBar.backItem?.backBarButtonItem?.title = "c"
         navigationController.navigationItem.backBarButtonItem?.title = "a"
         
-        let hotelSearchFlowController = HotelSelectionFlowController()
-        hotelSearchFlowController.start(on: navigationController)
+        let hotelSearchFlowController = HotelSelectionFlowController(on: navigationController)
+        hotelSearchFlowController.start()
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()

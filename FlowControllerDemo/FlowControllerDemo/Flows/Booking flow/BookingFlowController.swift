@@ -8,51 +8,34 @@
 
 import UIKit
 
-class BookingFlowController {
+class BookingFlowController: FlowController {
     
-    private(set) weak var navigationController: UINavigationController?
-    private(set) var router: Router!
-    
-    private(set) weak var parentFlowController: PromotionFlowController?
-    
+    let flowMode: FlowMode
     private(set) var reservation: Reservation
     
     var onCompleteBooking: (()->Void)? //todo:- booking
     var onDismiss: (()->Void)?
     
-    deinit {
-        print("### deinit: \(self)")
+    enum FlowMode {
+        case booking(with: Hotel)
+        case promotion(with: Hotel)
     }
     
-    //todo:- flow enum
-    init(hotel: Hotel, selectPromotion: Bool = false) {
-        reservation = Reservation(hotel: hotel)
-        if selectPromotion {
-            reservation.promotion = hotel.promotion
+    init(on navigationController: UINavigationController, for flow: FlowMode) {
+        flowMode = flow
+        switch flow {
+        case .booking(let hotel), .promotion(let hotel):
+            reservation = Reservation(hotel: hotel)
+            if case .promotion = flow { reservation.promotion = hotel.promotion }
         }
+        super.init(on: navigationController)
     }
     
-    func start(with parentFlowController: PromotionFlowController) {
-        self.parentFlowController = parentFlowController
-        start(on: parentFlowController.navigationController!)
-    }
     
-    func start(on navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.router = Router(on: navigationController)
-//        self.router.onDismiss = { [unowned self] in
-////            self.parentFlowController?.dismissChild()
-//            self.onDismiss?()
-//        }
-        self.router.onDismiss = onDismiss
+    override func start() {
         showDatePicker()
     }
     
-    func dismiss(animated: Bool = true) {
-        //todo:- dismiss its own child (chaining)
-        router.onDismiss = nil
-        router.dismiss(animated: animated)
-    }
     
     //MARK:- Controller showing handler
     

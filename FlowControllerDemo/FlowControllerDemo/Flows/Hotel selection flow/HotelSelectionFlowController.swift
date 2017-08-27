@@ -8,18 +8,11 @@
 
 import UIKit
 
-class HotelSelectionFlowController {
-    
-    private(set) weak var navigationController: UINavigationController?
-    private(set) weak var parentFlowController: FlowController?
-    private(set) var childFlowController: FlowController?
-    private(set) var router: Router!
+class HotelSelectionFlowController: FlowController {
     
     var onSelectHotel: ((_ hotel: Hotel)->Void)?
     
-    func start(on navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.router = Router(on: navigationController)
+    override func start() {
         showHotelSearch()
     }
     
@@ -29,8 +22,7 @@ class HotelSelectionFlowController {
         controller.onSelectPickCountry = {
             self.showCountryPicker()
         }
-        
-        navigationController?.pushViewController(controller, animated: true)
+        router.push(controller)
     }
     
     func showCountryPicker() {
@@ -39,8 +31,7 @@ class HotelSelectionFlowController {
         controller.onSelectCountry = { country in
             self.showHotelPicker(for: country)
         }
-        
-        navigationController?.pushViewController(controller, animated: true)
+        router.push(controller)
     }
     
     func showHotelPicker(for country: Country) {
@@ -49,11 +40,10 @@ class HotelSelectionFlowController {
         controller.onSelectHotel = { hotel in
 //            let bookingFlowController = BookingFlowController(hotel: hotel)
 //            bookingFlowController.start(on: self.navigationController!)
-            let promotionFlowController = PromotionFlowController()
-            promotionFlowController.start(on: self.navigationController!)
+            let promotionFlowController = PromotionFlowController(on: self.router.navigationController)
+            promotionFlowController.start()
         }
-        
-        navigationController?.pushViewController(controller, animated: true)
+        router.push(controller)
     }
     
     
