@@ -1,0 +1,68 @@
+//
+//  Hotel.swift
+//  FlowControllerDemo
+//
+//  Created by Pirush Prechathavanich on 8/27/17.
+//  Copyright © 2017 Pirush Prechathavanich. All rights reserved.
+//
+
+struct Hotel {
+    
+    let name: String
+    let country: Country
+    let city: String
+    
+    let promotion: Promotion?
+    
+    static let berlin = Hotel(name: "Berlin hotel", country: .germany, city: "Berlin", promotion: .nightInBerlin)
+    static let koln = Hotel(name: "Köln hotel", country: .germany, city: "Köln", promotion: nil)
+    static let munchen = Hotel(name: "München hotel", country: .germany, city: "München", promotion: nil)
+    
+    static let vienna = Hotel(name: "Vienna hotel", country: .austria, city: "Vienna", promotion: .dayInVienna)
+    static let salzburg = Hotel(name: "Salzburg hotel", country: .austria, city: "Salzburg", promotion: nil)
+    static let graz = Hotel(name: "Graz hote", country: .austria, city: "Graz", promotion: nil)
+    
+    static let bangkok = Hotel(name: "Bangkok hotel", country: .thailand, city: "Bangkok", promotion: .momentInBangkok)
+    static let chiangmai = Hotel(name: "Chiangmai hotel", country: .thailand, city: "Chiangmai", promotion: nil)
+    static let phuket = Hotel(name: "Phuket hotel", country: .thailand, city: "Phuket", promotion: nil)
+    
+}
+
+struct Promotion {
+    
+    let name: String
+    let description: String
+    let discountPerNight: Double
+    
+    static let nightInBerlin = Promotion(name: "Night in Berlin",
+                                         description: description("30 Baht discounted per night!"),
+                                         discountPerNight: 30.0)
+    
+    static let dayInVienna = Promotion(name: "Day in Vienna",
+                                       description: description("40 Baht discounted per night!"),
+                                       discountPerNight: 40.0)
+    
+    static let momentInBangkok = Promotion(name: "Moment in Bangkok",
+                                           description: description("20 Baht discounted per night!"),
+                                           discountPerNight: 20.0)
+    
+    static func description(_ discountText: String) -> String {
+        return "\(discountText) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales metus et ultrices rutrum. Pellentesque quis purus non eros pellentesque molestie."
+    }
+}
+
+enum Country: StringLiteralType {
+    
+    case germany = "Germany"
+    case austria = "Austria"
+    case thailand = "Thailand"
+    
+    var hotels: [Hotel] {
+        switch self {
+        case .germany:      return [.berlin, .koln, .munchen]
+        case .austria:      return [.vienna, .salzburg, .graz]
+        case .thailand:     return [.bangkok, .chiangmai, .phuket]
+        }
+    }
+    
+}

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoomSelectionViewController: UIViewController {
+class RoomSelectionViewController: BaseViewController {
     
     @IBOutlet weak var doubleRoomButton: UIButton!
     @IBOutlet weak var twinRoomButton: UIButton!
@@ -19,7 +19,6 @@ class RoomSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Room selection"
-        self.navigationItem.backBarButtonItem = .defaultBack
     }
     
     @IBAction func roomDidTap(_ sender: UIButton) {

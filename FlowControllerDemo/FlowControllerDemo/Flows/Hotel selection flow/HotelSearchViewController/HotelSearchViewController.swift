@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HotelSearchViewController: UIViewController {
+class HotelSearchViewController: BaseViewController {
 
     @IBOutlet weak var pickCountryButton: UIButton!
     
@@ -17,7 +17,6 @@ class HotelSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Hotel search"
-        self.navigationItem.backBarButtonItem = .defaultBack
     }
 
     @IBAction func pickCountryDidTap(_ sender: Any) {

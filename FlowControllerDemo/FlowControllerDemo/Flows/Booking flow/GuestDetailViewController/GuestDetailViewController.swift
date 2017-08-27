@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GuestDetailViewController: UIViewController {
+class GuestDetailViewController: BaseViewController {
     
     @IBOutlet weak var fieldsView: UIView!
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -25,7 +25,6 @@ class GuestDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Guest information"
-        self.navigationItem.backBarButtonItem = .defaultBack
         setup(with: guest)
         setupView()
     }

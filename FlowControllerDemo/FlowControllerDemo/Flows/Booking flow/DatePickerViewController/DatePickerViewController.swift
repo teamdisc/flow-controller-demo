@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController {
+class DatePickerViewController: BaseViewController {
     
     @IBOutlet weak var oneNightButton: UIButton!
     @IBOutlet weak var twoNightsButton: UIButton!
@@ -19,7 +19,6 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Date picker"
-        self.navigationItem.backBarButtonItem = .defaultBack
     }
     
     @IBAction func dateDidTap(_ sender: UIButton) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookingReviewViewController: UIViewController {
+class BookingReviewViewController: BaseViewController {
 
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var detailsLabel: UILabel!
@@ -20,7 +20,6 @@ class BookingReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Booking review"
-        self.navigationItem.backBarButtonItem = .defaultBack
         detailsView.layer.cornerRadius = 8.0
         if let reservation = reservation {
             setup(with: reservation) 
@@ -35,25 +34,33 @@ class BookingReviewViewController: UIViewController {
                                                                       NSParagraphStyleAttributeName: paragraphStyle])
         let itemParagraphStyle = NSMutableParagraphStyle()
         itemParagraphStyle.lineSpacing = 2.0
-        let titleAttributes = [NSFontAttributeName: Font.medium(of: 16),
+        let titleAttributes = [NSFontAttributeName: Font.medium(of: 15),
                                NSParagraphStyleAttributeName: itemParagraphStyle]
-        let itemAttributes = [NSFontAttributeName: Font.regular(of: 16)]
+        let itemAttributes = [NSFontAttributeName: Font.regular(of: 14)]
+        
+        // set hotel
+        let hotelAttributedString = NSAttributedString.generate(title: "hotel",
+                                                                detail: reservation.hotel.name,
+                                                                titleAttributes: titleAttributes,
+                                                                detailAttributes: itemAttributes)
+        attributedString.append(hotelAttributedString)
+        attributedString.append(.paragraphBreak)
         
         // set guest
         let guestText = reservation.guest.firstName + " " + reservation.guest.lastName
-        let guestAttributedString = generateAttributedString(title: "guest",
-                                                             detail: guestText,
-                                                             titleAttributes: titleAttributes,
-                                                             detailAttributes: itemAttributes)
+        let guestAttributedString = NSAttributedString.generate(title: "guest",
+                                                                detail: guestText.capitalized,
+                                                                titleAttributes: titleAttributes,
+                                                                detailAttributes: itemAttributes)
         attributedString.append(guestAttributedString)
         attributedString.append(.paragraphBreak)
         
         // set room
         if let room = reservation.room {
-            let roomAttributedString = generateAttributedString(title: "room",
-                                                                detail: room.rawValue,
-                                                                titleAttributes: titleAttributes,
-                                                                detailAttributes: itemAttributes)
+            let roomAttributedString = NSAttributedString.generate(title: "room",
+                                                                   detail: room.rawValue,
+                                                                   titleAttributes: titleAttributes,
+                                                                   detailAttributes: itemAttributes)
             attributedString.append(roomAttributedString)
             attributedString.append(.paragraphBreak)
         }
@@ -61,35 +68,32 @@ class BookingReviewViewController: UIViewController {
         // set night amount
         if (reservation.nightAmount > 0) {
             let nightAmountText = "\(reservation.nightAmount) Night\(reservation.nightAmount > 1 ? "s" : "")"
-            let nightsAttributedString = generateAttributedString(title: "night",
-                                                                  detail: nightAmountText,
-                                                                  titleAttributes: titleAttributes,
-                                                                  detailAttributes: itemAttributes)
+            let nightsAttributedString = NSAttributedString.generate(title: "night",
+                                                                     detail: nightAmountText,
+                                                                     titleAttributes: titleAttributes,
+                                                                     detailAttributes: itemAttributes)
             attributedString.append(nightsAttributedString)
+            attributedString.append(.paragraphBreak)
+        }
+        
+        if let promotion = reservation.promotion {
+            let promotionAttributedString = NSAttributedString.generate(title: "promotion",
+                                                                        detail: promotion.name,
+                                                                        titleAttributes: titleAttributes,
+                                                                        detailAttributes: itemAttributes)
+            attributedString.append(promotionAttributedString)
             attributedString.append(.paragraphBreak)
         }
         
         // set total price
         let priceText = "\(reservation.price.format(decimal: 2)) Baht"
-        let priceAttributedString = generateAttributedString(title: "total",
-                                                             detail: priceText,
-                                                             titleAttributes: titleAttributes,
-                                                             detailAttributes: itemAttributes)
+        let priceAttributedString = NSAttributedString.generate(title: "total",
+                                                                detail: priceText,
+                                                                titleAttributes: titleAttributes,
+                                                                detailAttributes: itemAttributes)
         attributedString.append(priceAttributedString)
         
         detailsLabel.attributedText = attributedString
-    }
-    
-    private func generateAttributedString(title: String,
-                                          detail: String,
-                                          titleAttributes: [String: Any],
-                                          detailAttributes: [String: Any]) -> NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: title+": ",
-                                                         attributes: titleAttributes)
-        let detailAttributedString = NSAttributedString(string: detail,
-                                                        attributes: detailAttributes)
-        attributedString.append(detailAttributedString)
-        return attributedString.copy() as! NSAttributedString
     }
 
     @IBAction func bookNowDidTap(_ sender: Any) {
@@ -98,8 +102,22 @@ class BookingReviewViewController: UIViewController {
 
 }
 
+//todo:- move this out!
+
 extension NSAttributedString {
     
     static let paragraphBreak = NSAttributedString(string: "\n")
+    
+    static func generate(title: String,
+                         detail: String,
+                         titleAttributes: [String: Any],
+                         detailAttributes: [String: Any]) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: title+": ",
+                                                         attributes: titleAttributes)
+        let detailAttributedString = NSAttributedString(string: detail,
+                                                        attributes: detailAttributes)
+        attributedString.append(detailAttributedString)
+        return attributedString.copy() as! NSAttributedString
+    }
     
 }
