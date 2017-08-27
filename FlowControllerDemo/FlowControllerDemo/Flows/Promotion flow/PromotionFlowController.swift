@@ -12,6 +12,8 @@ class PromotionFlowController {
     
     private(set) weak var navigationController: UINavigationController?
     private(set) var router: Router!
+    
+    private(set) var childFlowController: BookingFlowController?
 
     var onSelectBookingWithPromotion: ((Promotion)->Void)?
     
@@ -21,6 +23,11 @@ class PromotionFlowController {
         self.navigationController = navigationController
         self.router = Router(on: navigationController)
         showPromotions()
+    }
+    
+    func dismissChild() {
+        //todo:- iterate to dismiss all flowController of its child
+        childFlowController = nil
     }
     
     func showPromotions() {
@@ -38,9 +45,9 @@ class PromotionFlowController {
         controller.onSelectBookNow = { hotel in
             let bookingFlowController = BookingFlowController(hotel: hotel, selectPromotion: true)
             bookingFlowController.onCompleteBooking = {
-                self.router.setViewControllers([])
+                self.dismissChild()
             }
-            bookingFlowController.start(on: self.navigationController!)
+            bookingFlowController.start(with: self)
         }
         router.push(controller)
     }
