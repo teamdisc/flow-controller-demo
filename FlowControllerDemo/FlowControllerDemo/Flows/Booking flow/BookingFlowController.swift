@@ -18,6 +18,7 @@ class BookingFlowController {
     private(set) var reservation: Reservation
     
     var onCompleteBooking: (()->Void)? //todo:- booking
+    var onDismiss: (()->Void)?
     
     deinit {
         print("### deinit: \(self)")
@@ -39,14 +40,18 @@ class BookingFlowController {
     func start(on navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.router = Router(on: navigationController)
-        self.router.onDismiss = { [unowned self] in
-            self.parentFlowController?.dismissChild()
-        }
+//        self.router.onDismiss = { [unowned self] in
+////            self.parentFlowController?.dismissChild()
+//            self.onDismiss?()
+//        }
+        self.router.onDismiss = onDismiss
         showDatePicker()
     }
     
-    func dismiss() {
-        
+    func dismiss(animated: Bool = true) {
+        //todo:- dismiss its own child (chaining)
+        router.onDismiss = nil
+        router.dismiss(animated: animated)
     }
     
     //MARK:- Controller showing handler

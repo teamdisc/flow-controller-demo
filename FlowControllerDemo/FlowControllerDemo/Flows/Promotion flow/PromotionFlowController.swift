@@ -27,6 +27,7 @@ class PromotionFlowController {
     
     func dismissChild() {
         //todo:- iterate to dismiss all flowController of its child
+        childFlowController?.dismiss(animated: true)
         childFlowController = nil
         router.navigationController.delegate = router
     }
@@ -48,6 +49,10 @@ class PromotionFlowController {
             bookingFlowController.onCompleteBooking = {
                 self.dismissChild()
             }
+            bookingFlowController.onDismiss = {
+                self.dismissChild()
+            }
+            self.childFlowController = bookingFlowController
             bookingFlowController.start(with: self)
         }
         router.push(controller)
