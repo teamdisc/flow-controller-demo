@@ -36,7 +36,6 @@ class BookingFlowController: FlowController {
         showDatePicker()
     }
     
-    
     //MARK:- Controller showing handler
     
     func showDatePicker() {

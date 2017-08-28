@@ -33,16 +33,18 @@ import UIKit
 //    
 //}
 
-protocol FlowControllable {
+
+protocol FlowControllable: class {
     
     var router: Router { get }
     
     var childFlowController: FlowControllable? { get }
-    var parentFlowController: FlowControllable? { get }
+    weak var parentFlowController: FlowControllable? { get }
     
     func start()
     func start(from parentControllable: FlowControllable)
     func dismiss(animated: Bool)
+    func dismissChild(animated: Bool)
     func proceed(to nextFlowControllable: FlowControllable)
     
 }
@@ -50,20 +52,35 @@ protocol FlowControllable {
 class FlowController: FlowControllable {
     
     private(set) var childFlowController: FlowControllable?
-    private(set) var parentFlowController: FlowControllable?
+    private(set) weak var parentFlowController: FlowControllable?
     private(set) var router: Router
+    
+    deinit {
+        print("### deinit: \(self)")
+    }
     
     init(on navigationController: UINavigationController) {
         router = Router(on: navigationController)
+        router.onDismiss = { [unowned self] in
+            if let parentFlowController = self.parentFlowController {
+                parentFlowController.dismissChild(animated: true)
+            }
+        }
     }
     
     func start() {
         //customizable implementaion
     }
     
+    //todo:- private?
     func start(from parentControllable: FlowControllable) {
         self.parentFlowController = parentControllable
         start()
+    }
+    
+    func dismissChild(animated: Bool = true) {
+        childFlowController?.dismiss(animated: animated)
+        childFlowController = nil
     }
     
     func dismiss(animated: Bool = true) {
@@ -77,5 +94,5 @@ class FlowController: FlowControllable {
         childFlowController = nextFlowControllable
         nextFlowControllable.start(from: self)
     }
-
+    
 }

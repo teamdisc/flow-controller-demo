@@ -54,7 +54,7 @@ class Router: NSObject {
         } else {
             setViewControllers([], animated: animated)
         }
-        onDismiss?()
+//        onDismiss?()
     }
     
     //todo:- test needed!

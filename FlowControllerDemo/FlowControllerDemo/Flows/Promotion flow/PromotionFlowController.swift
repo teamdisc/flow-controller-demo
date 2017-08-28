@@ -29,17 +29,21 @@ class PromotionFlowController: FlowController  {
         let controller: PromotionDetailViewController = PromotionDetailViewController.loadFromNib()
         controller.hotel = hotel
         controller.onSelectBookNow = { hotel in
-            let bookingFlowController = BookingFlowController(on: self.router.navigationController,
-                                                              for: .promotion(with: hotel))
-            bookingFlowController.onCompleteBooking = {
-                self.dismissChild()
-            }
-            bookingFlowController.onDismiss = {
-                self.dismissChild()
-            }
-            self.proceed(to: bookingFlowController)
+            self.proceedToBookingFlow(for: hotel)
         }
         router.push(controller)
+    }
+    
+    func proceedToBookingFlow(for hotel: Hotel) {
+        let bookingFlowController = BookingFlowController(on: self.router.navigationController,
+                                                          for: .promotion(with: hotel))
+        bookingFlowController.onCompleteBooking = { [unowned self] in
+            self.dismissChild()
+        }
+        bookingFlowController.onDismiss = { [unowned self] in
+            self.dismissChild()
+        }
+        self.proceed(to: bookingFlowController)
     }
     
 }

@@ -41,7 +41,7 @@ class HotelSelectionFlowController: FlowController {
 //            let bookingFlowController = BookingFlowController(hotel: hotel)
 //            bookingFlowController.start(on: self.navigationController!)
             let promotionFlowController = PromotionFlowController(on: self.router.navigationController)
-            promotionFlowController.start()
+            self.proceed(to: promotionFlowController)
         }
         router.push(controller)
     }
