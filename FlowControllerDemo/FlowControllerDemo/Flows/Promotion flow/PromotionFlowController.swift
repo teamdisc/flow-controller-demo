@@ -8,18 +8,11 @@
 
 import UIKit
 
-class PromotionFlowController {
-    
-    private(set) weak var navigationController: UINavigationController?
-    private(set) var router: Router!
+class PromotionFlowController: FlowController  {
 
     var onSelectBookingWithPromotion: ((Promotion)->Void)?
     
-    //todo:- start with option?
-    
-    func start(on navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.router = Router(on: navigationController)
+    override func start() {
         showPromotions()
     }
     
@@ -36,13 +29,21 @@ class PromotionFlowController {
         let controller: PromotionDetailViewController = PromotionDetailViewController.loadFromNib()
         controller.hotel = hotel
         controller.onSelectBookNow = { hotel in
-            let bookingFlowController = BookingFlowController(hotel: hotel, selectPromotion: true)
-            bookingFlowController.onCompleteBooking = {
-                self.router.setViewControllers([])
-            }
-            bookingFlowController.start(on: self.navigationController!)
+            self.proceedToBookingFlow(for: hotel)
         }
         router.push(controller)
+    }
+    
+    func proceedToBookingFlow(for hotel: Hotel) {
+        let bookingFlowController = BookingFlowController(on: self.router.navigationController,
+                                                          for: .promotion(with: hotel))
+        bookingFlowController.onCompleteBooking = { [unowned self] in
+            self.dismissChild()
+        }
+        bookingFlowController.onDismiss = { [unowned self] in
+            self.dismissChild()
+        }
+        self.proceed(to: bookingFlowController)
     }
     
 }

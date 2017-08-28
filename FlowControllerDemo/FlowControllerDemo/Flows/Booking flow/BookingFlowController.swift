@@ -8,24 +8,35 @@
 
 import UIKit
 
-class BookingFlowController {
+class BookingFlowController: FlowController {
     
-    private(set) weak var navigationController: UINavigationController?
-    private(set) var router: Router!
-    
+    let flowMode: FlowMode
     private(set) var reservation: Reservation
     
     var onCompleteBooking: (()->Void)? //todo:- booking
+    var onDismiss: (()->Void)?
     
-    init(hotel: Hotel) {
-        reservation = Reservation(hotel: hotel)
+    enum FlowMode {
+        case booking(with: Hotel)
+        case promotion(with: Hotel)
     }
     
-    func start(on navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.router = Router(on: navigationController)
+    init(on navigationController: UINavigationController, for flow: FlowMode) {
+        flowMode = flow
+        switch flow {
+        case .booking(let hotel), .promotion(let hotel):
+            reservation = Reservation(hotel: hotel)
+            if case .promotion = flow { reservation.promotion = hotel.promotion }
+        }
+        super.init(on: navigationController)
+    }
+    
+    
+    override func start() {
         showDatePicker()
     }
+    
+    //MARK:- Controller showing handler
     
     func showDatePicker() {
         let controller: DatePickerViewController = DatePickerViewController.loadFromNib()
@@ -72,6 +83,7 @@ class BookingFlowController {
         controller.reservation = reservation
         controller.onCompleteBooking = {
             print("### complete: booking flow")
+            self.onCompleteBooking?()
         }
         router.push(controller)
     }
