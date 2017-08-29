@@ -12,21 +12,36 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var applicationFlowController: ApplicationFlowController!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupAppearance()
         
-        let navigationController = UINavigationController()
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController.navigationBar.shadowImage = UIImage()
-        navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.backItem?.backBarButtonItem?.title = "c"
-        navigationController.navigationItem.backBarButtonItem?.title = "a"
+        let createNavigationController = { () -> UINavigationController in
+            let navigationController = UINavigationController()
+            navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationController.navigationBar.shadowImage = UIImage()
+            navigationController.navigationBar.isTranslucent = true
+            return navigationController
+        }
         
-        let hotelSearchFlowController = HotelSelectionFlowController(on: navigationController)
-        hotelSearchFlowController.start()
+        let hotelSelectionFlowController = HotelSelectionFlowController(on: createNavigationController())
+        let promotionFlowController = PromotionFlowController(on: createNavigationController())
         
-        self.window?.rootViewController = navigationController
+        let flowControllers = [hotelSelectionFlowController, promotionFlowController]
+        applicationFlowController = ApplicationFlowController(on: UITabBarController(), with: flowControllers)
+        
+        applicationFlowController
+            .customize(for: hotelSelectionFlowController) { tabBarItem in
+//                tabBarItem.title = "Booking"
+                tabBarItem.image = #imageLiteral(resourceName: "icon-luggage").withRenderingMode(.alwaysOriginal)
+            }.customize(for: promotionFlowController) { tabBarItem in
+//                tabBarItem.title = "Promotion"
+                tabBarItem.image = #imageLiteral(resourceName: "icon-minibar").withRenderingMode(.alwaysOriginal)
+            }.apply() //todo:- remove this, no implementation (just to shut the compiler up)
+        
+        
+        self.window?.rootViewController = applicationFlowController.tabRouter.tabBarController
         self.window?.makeKeyAndVisible()
         
         return true
@@ -45,6 +60,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSForegroundColorAttributeName: UIColor.white,
             NSFontAttributeName: Font.demiBold(of: 16)
         ]
+        
+        // tab bar appearance
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.barTintColor = .clear
+        tabBarAppearance.backgroundColor = .clear
+        tabBarAppearance.backgroundImage = UIImage()
+        tabBarAppearance.shadowImage = UIImage()
         
         // bar button appearance
         let barButtonItemAppearance = UIBarButtonItem.appearance()

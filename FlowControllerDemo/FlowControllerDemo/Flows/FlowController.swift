@@ -8,32 +8,6 @@
 
 import UIKit
 
-//class FlowController {
-//    
-//    private(set) var navigationController: UINavigationController
-//    private(set) var childFlowController: FlowController?
-//    
-//    init(navigationController: UINavigationController) {
-//        self.navigationController = navigationController
-//    }
-//    
-//    func start() {
-//        
-//    }
-//    
-//    func start(withParentFlowController parentFlowController: FlowController) {
-//        navigationController = parentFlowController.navigationController
-//        
-//    }
-//    
-//    func proceed(to nextFlow: FlowController) {
-//        childFlowController = nextFlow
-//        nextFlow.start(withParentFlowController: self)
-//    }
-//    
-//}
-
-
 protocol FlowControllable: class {
     
     var router: Router { get }
