@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1262901F5C27CA002BB7CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B12628E1F5C27CA002BB7CD /* LoginViewController.swift */; };
+		1B1262911F5C27CA002BB7CD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B12628F1F5C27CA002BB7CD /* LoginViewController.xib */; };
 		1B5E7B391F4F23C20090F06A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B381F4F23C20090F06A /* AppDelegate.swift */; };
-		1B5E7B3B1F4F23C20090F06A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B3A1F4F23C20090F06A /* FirstViewController.swift */; };
-		1B5E7B3D1F4F23C20090F06A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B3C1F4F23C20090F06A /* SecondViewController.swift */; };
 		1B5E7B401F4F23C20090F06A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B3E1F4F23C20090F06A /* Main.storyboard */; };
 		1B5E7B421F4F23C20090F06A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B411F4F23C20090F06A /* Assets.xcassets */; };
 		1B5E7B451F4F23C20090F06A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B431F4F23C20090F06A /* LaunchScreen.storyboard */; };
@@ -68,10 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B12628E1F5C27CA002BB7CD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1B12628F1F5C27CA002BB7CD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		1B5E7B351F4F23C20090F06A /* FlowControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B5E7B381F4F23C20090F06A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B5E7B3A1F4F23C20090F06A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1B5E7B3C1F4F23C20090F06A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1B5E7B3F1F4F23C20090F06A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B5E7B411F4F23C20090F06A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B5E7B441F4F23C20090F06A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -172,8 +172,6 @@
 				1B5E7B6C1F4F289D0090F06A /* Protocols */,
 				1B5E7B6D1F4F289D0090F06A /* Routers */,
 				1B5E7B381F4F23C20090F06A /* AppDelegate.swift */,
-				1B5E7B3A1F4F23C20090F06A /* FirstViewController.swift */,
-				1B5E7B3C1F4F23C20090F06A /* SecondViewController.swift */,
 				1B5E7B3E1F4F23C20090F06A /* Main.storyboard */,
 				1B5E7B411F4F23C20090F06A /* Assets.xcassets */,
 				1B5E7B431F4F23C20090F06A /* LaunchScreen.storyboard */,
@@ -396,6 +394,8 @@
 		1B5E7B7F1F4F2AB30090F06A /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1B12628E1F5C27CA002BB7CD /* LoginViewController.swift */,
+				1B12628F1F5C27CA002BB7CD /* LoginViewController.xib */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -566,6 +566,7 @@
 				1B5E7B401F4F23C20090F06A /* Main.storyboard in Resources */,
 				1B5E7B861F4F2B2F0090F06A /* HotelSearchViewController.xib in Resources */,
 				1B5E7B901F4F31370090F06A /* HotelPickerViewController.xib in Resources */,
+				1B1262911F5C27CA002BB7CD /* LoginViewController.xib in Resources */,
 				1BF39BAF1F516B3400E1B8EE /* GuestDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,9 +592,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1262901F5C27CA002BB7CD /* LoginViewController.swift in Sources */,
 				1BAFE6921F51FC4A007CE06E /* PromotionsViewController.swift in Sources */,
 				1B5E7B8F1F4F31370090F06A /* HotelPickerViewController.swift in Sources */,
-				1B5E7B3D1F4F23C20090F06A /* SecondViewController.swift in Sources */,
 				1BF39BA81F516B1000E1B8EE /* DatePickerViewController.swift in Sources */,
 				1B8DDF8B1F50AE06003AE998 /* Router.swift in Sources */,
 				1B8DDF8D1F50C7A0003AE998 /* FlowController.swift in Sources */,
@@ -601,7 +602,6 @@
 				1BAFE6841F51D85F007CE06E /* UIButton+AppearanceRoundable.swift in Sources */,
 				1B5E7B821F4F2AEB0090F06A /* Reservation.swift in Sources */,
 				1BAFE6961F51FC75007CE06E /* PromotionDetailViewController.swift in Sources */,
-				1B5E7B3B1F4F23C20090F06A /* FirstViewController.swift in Sources */,
 				1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */,
 				1BF39BB21F516B4100E1B8EE /* PriceSelectionViewController.swift in Sources */,
 				1B9FFCA61F522BF100F96BD9 /* BaseViewController.swift in Sources */,

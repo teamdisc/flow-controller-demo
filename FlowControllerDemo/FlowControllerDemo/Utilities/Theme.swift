@@ -51,9 +51,9 @@ struct Font {
 extension UIColor {
     
     convenience init(_ r: Int, _ g: Int, _ b: Int, alpha: Double = 1.0) {
-        self.init(red: CGFloat(r/255),
-                  green: CGFloat(g/255),
-                  blue: CGFloat(b/255),
+        self.init(red: CGFloat(r)/255.0,
+                  green: CGFloat(g)/255.0,
+                  blue: CGFloat(b)/255.0,
                   alpha: CGFloat(alpha))
     }
     
