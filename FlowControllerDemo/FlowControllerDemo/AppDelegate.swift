@@ -33,10 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         applicationFlowController
             .customize(for: hotelSelectionFlowController) { tabBarItem in
-//                tabBarItem.title = "Booking"
+                tabBarItem.title = "Booking"
                 tabBarItem.image = #imageLiteral(resourceName: "icon-luggage").withRenderingMode(.alwaysOriginal)
             }.customize(for: promotionFlowController) { tabBarItem in
-//                tabBarItem.title = "Promotion"
+                tabBarItem.title = "Promotion"
                 tabBarItem.image = #imageLiteral(resourceName: "icon-minibar").withRenderingMode(.alwaysOriginal)
             }.apply() //todo:- remove this, no implementation (just to shut the compiler up)
         
@@ -64,9 +64,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // tab bar appearance
         let tabBarAppearance = UITabBar.appearance()
         tabBarAppearance.barTintColor = .clear
+        tabBarAppearance.tintColor = .white
+        tabBarAppearance.unselectedItemTintColor = UIColor.black.withAlphaComponent(0.25)
         tabBarAppearance.backgroundColor = .clear
         tabBarAppearance.backgroundImage = UIImage()
         tabBarAppearance.shadowImage = UIImage()
+        
+        // tab bar item appearance
+        let barItemAppearance = UITabBarItem.appearance()
+        barItemAppearance.setTitleTextAttributes([
+            NSFontAttributeName: Font.medium(of: 9)
+            ], for: .normal)
         
         // bar button appearance
         let barButtonItemAppearance = UIBarButtonItem.appearance()

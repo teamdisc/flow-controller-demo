@@ -40,6 +40,9 @@ class HotelSelectionFlowController: FlowController {
         controller.onSelectHotel = { hotel in
             let bookingFlowController = BookingFlowController(on: self.router.navigationController,
                                                               for: .booking(with: hotel))
+            bookingFlowController.onCompleteBooking = {
+                self.dismissChild()
+            }
             self.proceed(to: bookingFlowController)
         }
         router.push(controller)
