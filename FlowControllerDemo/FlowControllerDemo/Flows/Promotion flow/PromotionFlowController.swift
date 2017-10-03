@@ -17,11 +17,12 @@ class PromotionFlowController: FlowController  {
     }
     
     func showPromotions() {
-        let controller: PromotionsViewController = PromotionsViewController.loadFromNib()
-        
-        controller.onSelectHotel = { hotel in
-            self.showPromotionDetail(for: hotel)
-        }
+//        let controller: PromotionsViewController = PromotionsViewController.loadFromNib()
+//        
+//        controller.onSelectHotel = { hotel in
+//            self.showPromotionDetail(for: hotel)
+//        }
+        let controller: LoginViewController = LoginViewController.loadFromNib()
         router.push(controller)
     }
     

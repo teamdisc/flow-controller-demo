@@ -31,7 +31,6 @@ class BookingFlowController: FlowController {
         super.init(on: navigationController)
     }
     
-    
     override func start() {
         showDatePicker()
     }

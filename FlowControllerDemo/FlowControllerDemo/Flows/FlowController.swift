@@ -12,6 +12,7 @@ protocol FlowControllable: class {
     
     var router: Router { get }
     
+    var modalFlowController: FlowControllable? { get }
     var childFlowController: FlowControllable? { get }
     weak var parentFlowController: FlowControllable? { get }
     
@@ -25,6 +26,7 @@ protocol FlowControllable: class {
 
 class FlowController: FlowControllable {
     
+    private(set) var modalFlowController: FlowControllable?
     private(set) var childFlowController: FlowControllable?
     private(set) weak var parentFlowController: FlowControllable?
     private(set) var router: Router

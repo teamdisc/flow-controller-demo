@@ -35,6 +35,11 @@
 		1BAFE6971F51FC75007CE06E /* PromotionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BAFE6951F51FC75007CE06E /* PromotionDetailViewController.xib */; };
 		1BAFE6991F5209EF007CE06E /* PromotionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFE6981F5209EF007CE06E /* PromotionFlowController.swift */; };
 		1BAFE69B1F520A09007CE06E /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAFE69A1F520A09007CE06E /* Hotel.swift */; };
+		1BE8D0D21F5EEDB000C965AF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8D0D01F5EEDB000C965AF /* RegisterViewController.swift */; };
+		1BE8D0D31F5EEDB000C965AF /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE8D0D11F5EEDB000C965AF /* RegisterViewController.xib */; };
+		1BE8D0D71F5EEFC000C965AF /* RegisterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8D0D51F5EEFC000C965AF /* RegisterDetailViewController.swift */; };
+		1BE8D0D81F5EEFC000C965AF /* RegisterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE8D0D61F5EEFC000C965AF /* RegisterDetailViewController.xib */; };
+		1BE8D0DA1F5EF0E600C965AF /* AuthenticationFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8D0D91F5EF0E600C965AF /* AuthenticationFlowController.swift */; };
 		1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */; };
 		1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF39BA21F516B0500E1B8EE /* BookingReviewViewController.swift */; };
 		1BF39BA51F516B0500E1B8EE /* BookingReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF39BA31F516B0500E1B8EE /* BookingReviewViewController.xib */; };
@@ -102,6 +107,11 @@
 		1BAFE6951F51FC75007CE06E /* PromotionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromotionDetailViewController.xib; sourceTree = "<group>"; };
 		1BAFE6981F5209EF007CE06E /* PromotionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionFlowController.swift; sourceTree = "<group>"; };
 		1BAFE69A1F520A09007CE06E /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		1BE8D0D01F5EEDB000C965AF /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1BE8D0D11F5EEDB000C965AF /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		1BE8D0D51F5EEFC000C965AF /* RegisterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterDetailViewController.swift; sourceTree = "<group>"; };
+		1BE8D0D61F5EEFC000C965AF /* RegisterDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterDetailViewController.xib; sourceTree = "<group>"; };
+		1BE8D0D91F5EF0E600C965AF /* AuthenticationFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowController.swift; sourceTree = "<group>"; };
 		1BF39BA01F51696A00E1B8EE /* UIViewController+DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+DeinitObservable.swift"; sourceTree = "<group>"; };
 		1BF39BA21F516B0500E1B8EE /* BookingReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingReviewViewController.swift; sourceTree = "<group>"; };
 		1BF39BA31F516B0500E1B8EE /* BookingReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingReviewViewController.xib; sourceTree = "<group>"; };
@@ -269,7 +279,9 @@
 			isa = PBXGroup;
 			children = (
 				1B5E7B7F1F4F2AB30090F06A /* LoginViewController */,
+				1BE8D0D41F5EEF2100C965AF /* RegisterDetailViewController */,
 				1B5E7B801F4F2AB30090F06A /* RegisterViewController */,
+				1BE8D0D91F5EF0E600C965AF /* AuthenticationFlowController.swift */,
 			);
 			path = "Authentication flow";
 			sourceTree = "<group>";
@@ -403,6 +415,8 @@
 		1B5E7B801F4F2AB30090F06A /* RegisterViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1BE8D0D01F5EEDB000C965AF /* RegisterViewController.swift */,
+				1BE8D0D11F5EEDB000C965AF /* RegisterViewController.xib */,
 			);
 			path = RegisterViewController;
 			sourceTree = "<group>";
@@ -434,6 +448,15 @@
 				1BAFE6951F51FC75007CE06E /* PromotionDetailViewController.xib */,
 			);
 			path = PromotionDetailViewController;
+			sourceTree = "<group>";
+		};
+		1BE8D0D41F5EEF2100C965AF /* RegisterDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1BE8D0D51F5EEFC000C965AF /* RegisterDetailViewController.swift */,
+				1BE8D0D61F5EEFC000C965AF /* RegisterDetailViewController.xib */,
+			);
+			path = RegisterDetailViewController;
 			sourceTree = "<group>";
 		};
 		1BF39BBA1F518E1400E1B8EE /* Utilities */ = {
@@ -554,6 +577,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE8D0D81F5EEFC000C965AF /* RegisterDetailViewController.xib in Resources */,
 				1BF39BA91F516B1000E1B8EE /* DatePickerViewController.xib in Resources */,
 				1B5E7B8A1F4F2EDC0090F06A /* CountryPickerViewController.xib in Resources */,
 				1BAFE6931F51FC4A007CE06E /* PromotionsViewController.xib in Resources */,
@@ -565,6 +589,7 @@
 				1BF39BA51F516B0500E1B8EE /* BookingReviewViewController.xib in Resources */,
 				1B5E7B401F4F23C20090F06A /* Main.storyboard in Resources */,
 				1B5E7B861F4F2B2F0090F06A /* HotelSearchViewController.xib in Resources */,
+				1BE8D0D31F5EEDB000C965AF /* RegisterViewController.xib in Resources */,
 				1B5E7B901F4F31370090F06A /* HotelPickerViewController.xib in Resources */,
 				1B1262911F5C27CA002BB7CD /* LoginViewController.xib in Resources */,
 				1BF39BAF1F516B3400E1B8EE /* GuestDetailViewController.xib in Resources */,
@@ -605,6 +630,7 @@
 				1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */,
 				1BF39BB21F516B4100E1B8EE /* PriceSelectionViewController.swift in Sources */,
 				1B9FFCA61F522BF100F96BD9 /* BaseViewController.swift in Sources */,
+				1BE8D0DA1F5EF0E600C965AF /* AuthenticationFlowController.swift in Sources */,
 				1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */,
 				1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */,
 				1BAFE6881F51FA04007CE06E /* ApplicationFlowController.swift in Sources */,
@@ -612,9 +638,11 @@
 				1BF39BBC1F518E3300E1B8EE /* Theme.swift in Sources */,
 				1BF39BB91F5174B000E1B8EE /* BookingFlowController.swift in Sources */,
 				1BAFE6991F5209EF007CE06E /* PromotionFlowController.swift in Sources */,
+				1BE8D0D71F5EEFC000C965AF /* RegisterDetailViewController.swift in Sources */,
 				1BAFE69B1F520A09007CE06E /* Hotel.swift in Sources */,
 				1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */,
 				1BF39BAE1F516B3400E1B8EE /* GuestDetailViewController.swift in Sources */,
+				1BE8D0D21F5EEDB000C965AF /* RegisterViewController.swift in Sources */,
 				1B5E7B891F4F2EDC0090F06A /* CountryPickerViewController.swift in Sources */,
 				1B5E7B921F4F33E80090F06A /* HotelSelectionFlowController.swift in Sources */,
 			);
