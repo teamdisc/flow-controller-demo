@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIButton {
-    dynamic var cornerRadius: CGFloat {
+    @objc dynamic var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
         set { layer.cornerRadius = newValue }
     }

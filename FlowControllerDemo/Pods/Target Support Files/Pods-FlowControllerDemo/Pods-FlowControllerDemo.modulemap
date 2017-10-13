@@ -1,0 +1,6 @@
+framework module Pods_FlowControllerDemo {
+  umbrella header "Pods-FlowControllerDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

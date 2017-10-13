@@ -57,8 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.barTintColor = .white
         navigationBarAppearance.tintColor = .white
         navigationBarAppearance.titleTextAttributes = [
-            NSForegroundColorAttributeName: UIColor.white,
-            NSFontAttributeName: Font.demiBold(of: 16)
+            NSAttributedStringKey.foregroundColor: UIColor.white,
+            NSAttributedStringKey.font: Font.demiBold(of: 16)
         ]
         
         // tab bar appearance
@@ -73,14 +73,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // tab bar item appearance
         let barItemAppearance = UITabBarItem.appearance()
         barItemAppearance.setTitleTextAttributes([
-            NSFontAttributeName: Font.medium(of: 9)
+            NSAttributedStringKey.font: Font.medium(of: 9)
             ], for: .normal)
         
         // bar button appearance
         let barButtonItemAppearance = UIBarButtonItem.appearance()
         barButtonItemAppearance.setTitleTextAttributes([
-            NSForegroundColorAttributeName: UIColor.white,
-            NSFontAttributeName: Font.medium(of: 16)
+            NSAttributedStringKey.foregroundColor: UIColor.white,
+            NSAttributedStringKey.font: Font.medium(of: 16)
             ], for: .normal)
         
         UIButton.appearance().cornerRadius = 4

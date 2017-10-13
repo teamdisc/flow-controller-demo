@@ -30,13 +30,13 @@ class BookingReviewViewController: BaseViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 8.0
         let attributedString = NSMutableAttributedString(string: "Booking review\n",
-                                                         attributes: [NSFontAttributeName: Font.demiBold(of: 16),
-                                                                      NSParagraphStyleAttributeName: paragraphStyle])
+                                                         attributes: [NSAttributedStringKey.font: Font.demiBold(of: 16),
+                                                                      NSAttributedStringKey.paragraphStyle: paragraphStyle])
         let itemParagraphStyle = NSMutableParagraphStyle()
         itemParagraphStyle.lineSpacing = 2.0
-        let titleAttributes = [NSFontAttributeName: Font.medium(of: 15),
-                               NSParagraphStyleAttributeName: itemParagraphStyle]
-        let itemAttributes = [NSFontAttributeName: Font.regular(of: 14)]
+        let titleAttributes = [NSAttributedStringKey.font: Font.medium(of: 15),
+                               NSAttributedStringKey.paragraphStyle: itemParagraphStyle]
+        let itemAttributes = [NSAttributedStringKey.font: Font.regular(of: 14)]
         
         // set hotel
         let hotelAttributedString = NSAttributedString.generate(title: "hotel",
@@ -110,8 +110,8 @@ extension NSAttributedString {
     
     static func generate(title: String,
                          detail: String,
-                         titleAttributes: [String: Any],
-                         detailAttributes: [String: Any]) -> NSAttributedString {
+                         titleAttributes: [NSAttributedStringKey: Any],
+                         detailAttributes: [NSAttributedStringKey: Any]) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: title+": ",
                                                          attributes: titleAttributes)
         let detailAttributedString = NSAttributedString(string: detail,

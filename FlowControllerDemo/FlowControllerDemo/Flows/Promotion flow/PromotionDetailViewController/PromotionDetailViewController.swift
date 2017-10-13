@@ -34,17 +34,17 @@ class PromotionDetailViewController: BaseViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.paragraphSpacing = 8.0
         let attributedString = NSMutableAttributedString(string: promotion.name+"\n",
-                                                         attributes: [NSFontAttributeName: Font.demiBold(of: 17),
-                                                                      NSParagraphStyleAttributeName: paragraphStyle.copy()])
+                                                         attributes: [NSAttributedStringKey.font: Font.demiBold(of: 17),
+                                                                      NSAttributedStringKey.paragraphStyle: paragraphStyle.copy()])
         
         paragraphStyle.paragraphSpacing = 2.0
-        let titleAttributes = [NSFontAttributeName: Font.medium(of: 16),
-                               NSParagraphStyleAttributeName: paragraphStyle.copy()]
-        let itemAttributes = [NSFontAttributeName: Font.regular(of: 16)]
+        let titleAttributes = [NSAttributedStringKey.font: Font.medium(of: 16),
+                               NSAttributedStringKey.paragraphStyle: paragraphStyle.copy()]
+        let itemAttributes = [NSAttributedStringKey.font: Font.regular(of: 16)]
         
         paragraphStyle.firstLineHeadIndent = 12.0
-        let descriptionAttributes = [NSFontAttributeName: Font.regular(of: 14),
-                                     NSParagraphStyleAttributeName: paragraphStyle.copy()]
+        let descriptionAttributes = [NSAttributedStringKey.font: Font.regular(of: 14),
+                                     NSAttributedStringKey.paragraphStyle: paragraphStyle.copy()]
         
         
         // set hotel
