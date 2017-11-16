@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B045E241F921E1300B6ADD0 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B045E231F921E1300B6ADD0 /* Row.swift */; };
+		1B045E261F933C6900B6ADD0 /* AdapterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B045E251F933C6900B6ADD0 /* AdapterAction.swift */; };
 		1B1262901F5C27CA002BB7CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B12628E1F5C27CA002BB7CD /* LoginViewController.swift */; };
 		1B1262911F5C27CA002BB7CD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B12628F1F5C27CA002BB7CD /* LoginViewController.xib */; };
 		1B3F79EF1F9088900056685A /* ObjectConsuming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F79EE1F9088900056685A /* ObjectConsuming.swift */; };
 		1B3F79F11F9088C00056685A /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F79F01F9088C00056685A /* Datasource.swift */; };
 		1B3F79F31F9088D30056685A /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F79F21F9088D30056685A /* TableViewAdapter.swift */; };
 		1B3F79FB1F908B2E0056685A /* TableViewAdapter+ReusableNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F79FA1F908B2E0056685A /* TableViewAdapter+ReusableNib.swift */; };
+		1B3F79FC1F908EAC0056685A /* UICollectionView+ReusableNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F79F81F908A5F0056685A /* UICollectionView+ReusableNib.swift */; };
+		1B3F79FD1F908EAE0056685A /* UITableView+ReusableNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F79F91F908A5F0056685A /* UITableView+ReusableNib.swift */; };
+		1B3F79FE1F908EB10056685A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F79F61F908A3F0056685A /* Reusable.swift */; };
+		1B3F79FF1F908EB30056685A /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F79F71F908A400056685A /* Nibable.swift */; };
 		1B5E7B391F4F23C20090F06A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E7B381F4F23C20090F06A /* AppDelegate.swift */; };
 		1B5E7B401F4F23C20090F06A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B3E1F4F23C20090F06A /* Main.storyboard */; };
 		1B5E7B421F4F23C20090F06A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5E7B411F4F23C20090F06A /* Assets.xcassets */; };
@@ -82,6 +88,8 @@
 /* Begin PBXFileReference section */
 		027C280C1F57D9C4A1A6BECE /* Pods_FlowControllerDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowControllerDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		041141072E3D39295B04386D /* Pods-FlowControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowControllerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlowControllerDemo/Pods-FlowControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		1B045E231F921E1300B6ADD0 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		1B045E251F933C6900B6ADD0 /* AdapterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterAction.swift; sourceTree = "<group>"; };
 		1B12628E1F5C27CA002BB7CD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1B12628F1F5C27CA002BB7CD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		1B3F79EE1F9088900056685A /* ObjectConsuming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectConsuming.swift; sourceTree = "<group>"; };
@@ -185,6 +193,8 @@
 				1B3F79EE1F9088900056685A /* ObjectConsuming.swift */,
 				1B3F79F01F9088C00056685A /* Datasource.swift */,
 				1B3F79F21F9088D30056685A /* TableViewAdapter.swift */,
+				1B045E231F921E1300B6ADD0 /* Row.swift */,
+				1B045E251F933C6900B6ADD0 /* AdapterAction.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -872,11 +882,15 @@
 				1BAFE6961F51FC75007CE06E /* PromotionDetailViewController.swift in Sources */,
 				1B5E7B851F4F2B2F0090F06A /* HotelSearchViewController.swift in Sources */,
 				1B3F79F11F9088C00056685A /* Datasource.swift in Sources */,
+				1B3F79FF1F908EB30056685A /* Nibable.swift in Sources */,
 				1BF39BB21F516B4100E1B8EE /* PriceSelectionViewController.swift in Sources */,
 				1B3F79F31F9088D30056685A /* TableViewAdapter.swift in Sources */,
 				1B9FFCA61F522BF100F96BD9 /* BaseViewController.swift in Sources */,
+				1B045E261F933C6900B6ADD0 /* AdapterAction.swift in Sources */,
 				1BE8D0DA1F5EF0E600C965AF /* AuthenticationFlowController.swift in Sources */,
 				1BF39BB61F516B4B00E1B8EE /* RoomSelectionViewController.swift in Sources */,
+				1B045E241F921E1300B6ADD0 /* Row.swift in Sources */,
+				1B3F79FC1F908EAC0056685A /* UICollectionView+ReusableNib.swift in Sources */,
 				1BF39BA11F51696A00E1B8EE /* UIViewController+DeinitObservable.swift in Sources */,
 				1BAFE6881F51FA04007CE06E /* ApplicationFlowController.swift in Sources */,
 				1B5E7B941F4F36F30090F06A /* UIViewController+NibInstantiable.swift in Sources */,
@@ -886,11 +900,13 @@
 				1B3F79FB1F908B2E0056685A /* TableViewAdapter+ReusableNib.swift in Sources */,
 				1BE8D0D71F5EEFC000C965AF /* RegisterDetailViewController.swift in Sources */,
 				1BAFE69B1F520A09007CE06E /* Hotel.swift in Sources */,
+				1B3F79FD1F908EAE0056685A /* UITableView+ReusableNib.swift in Sources */,
 				1BF39BA41F516B0500E1B8EE /* BookingReviewViewController.swift in Sources */,
 				1BF39BAE1F516B3400E1B8EE /* GuestDetailViewController.swift in Sources */,
 				1BE8D0D21F5EEDB000C965AF /* RegisterViewController.swift in Sources */,
 				1B5E7B891F4F2EDC0090F06A /* CountryPickerViewController.swift in Sources */,
 				1B5E7B921F4F33E80090F06A /* HotelSelectionFlowController.swift in Sources */,
+				1B3F79FE1F908EB10056685A /* Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

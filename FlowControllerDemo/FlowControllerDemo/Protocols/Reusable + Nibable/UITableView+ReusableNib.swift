@@ -22,6 +22,10 @@ extension UITableView {
         return self.dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
     
+    func dequeueReusableCell<T: UITableViewCell>(_ cellClass: T.Type, for indexPath: IndexPath) -> T {
+        return dequeueReusableCell(withIdentifier: cellClass.reuseIdentifier, for: indexPath) as! T
+    }
+    
     func registerReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_: T.Type) where T: Reusable {
         register(T.self, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
     }
@@ -35,3 +39,5 @@ extension UITableView {
     }
     
 }
+
+extension UITableViewCell: Reusable {}
